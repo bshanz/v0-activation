@@ -96,7 +96,7 @@ export function Hero() {
           <div className="flex items-center justify-center gap-2 mb-4">
             <div className="h-px w-8 bg-gradient-to-r from-transparent to-[var(--accent-violet)]/50" />
             <span className="text-xs font-semibold uppercase tracking-widest text-[var(--accent-violet)]">
-              Core Insight
+              Active Sponsorship Triples Success Rates
             </span>
             <div className="h-px w-8 bg-gradient-to-l from-transparent to-[var(--accent-violet)]/50" />
           </div>
