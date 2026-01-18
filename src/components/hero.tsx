@@ -164,7 +164,7 @@ export function Hero() {
 
             {/* Prosci attribution */}
             <p className="mt-8 text-sm text-[#666666] text-center border-t border-[#EAEAEA] pt-6 leading-relaxed">
-              {heroData.coreInsight}
+              <a href="https://www.prosci.com/methodology-overview" target="_blank" rel="noopener noreferrer" className="text-[#0070F3] hover:underline">Prosci</a> research shows projects with engaged sponsors are 79% likely to meet objectives versus 27% for those without. This playbook makes sponsor activation incredibly easy.
             </p>
           </div>
         </div>
