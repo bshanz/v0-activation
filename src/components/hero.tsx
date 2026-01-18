@@ -39,19 +39,49 @@ export function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center px-4 py-32 overflow-hidden"
     >
-      {/* Atmospheric background spotlights */}
+      {/* Background gradient blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Top left blue blob */}
         <div
-          className="spotlight opacity-40"
-          style={{ top: "-20%", left: "-10%" }}
+          className="blob blob-blue"
+          style={{
+            width: "600px",
+            height: "600px",
+            top: "-15%",
+            left: "-10%",
+          }}
         />
+        {/* Top right purple blob */}
         <div
-          className="spotlight spotlight-violet opacity-30"
-          style={{ top: "10%", right: "-15%" }}
+          className="blob blob-purple"
+          style={{
+            width: "500px",
+            height: "500px",
+            top: "5%",
+            right: "-8%",
+          }}
         />
+        {/* Bottom center cyan blob */}
         <div
-          className="spotlight opacity-20"
-          style={{ bottom: "-30%", left: "30%" }}
+          className="blob blob-cyan"
+          style={{
+            width: "700px",
+            height: "700px",
+            bottom: "-20%",
+            left: "50%",
+            transform: "translateX(-50%)",
+          }}
+        />
+        {/* Additional subtle blue blob bottom left */}
+        <div
+          className="blob blob-blue"
+          style={{
+            width: "400px",
+            height: "400px",
+            bottom: "10%",
+            left: "-5%",
+            opacity: 0.5,
+          }}
         />
       </div>
 
@@ -184,7 +214,6 @@ export function Hero() {
         aria-hidden="true"
       >
         <div className="flex flex-col items-center gap-2 text-[#888888]">
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
           <div className="w-5 h-8 rounded-full border border-[#EAEAEA] flex items-start justify-center p-1.5">
             <div className="w-1 h-2 rounded-full bg-[#0070F3] animate-bounce" />
           </div>

@@ -74,7 +74,7 @@ export function ABCCards() {
               : "opacity-0 translate-y-8"
           )}
         >
-          <span className="badge-accent mb-4 inline-block">Framework</span>
+          <span className="badge-accent mb-4 inline-block px-5 py-1.5">Framework</span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight text-black">
             The ABC Framework
           </h2>

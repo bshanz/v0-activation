@@ -53,6 +53,7 @@ export default function Home() {
         id="success-factors"
         title="Adoption Success Factors"
         subtitle="The layers that drive sustainable adoption"
+        defaultOpen
       >
         <div className="space-y-8 pt-4">
           {/* Three Layers That Matter */}

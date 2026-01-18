@@ -62,21 +62,21 @@ export const heroData = {
 export const abcCards: ABCCard[] = [
   {
     letter: "A",
-    title: "Awareness",
-    description: "Create visibility. Developers can't use what they don't know exists. Focus on making v0 known across your organization through targeted communication.",
-    icon: "👁️",
+    title: "Executive Sponsorship & Alignment",
+    description: "Clear goals tied to business outcomes. Execs reinforcing usage and asking for progress.",
+    icon: "🎯",
   },
   {
     letter: "B",
-    title: "Building Desire",
-    description: "Move from 'I know about it' to 'I want to use it' through success stories, peer influence, and demonstrating clear value for individual workflows.",
-    icon: "🔥",
+    title: "Builder Engagement & Champions",
+    description: "Identified champions running workshops and hackathons. Re-enablement sessions to keep energy up. Internal storytelling and promotion of wins.",
+    icon: "🏗️",
   },
   {
     letter: "C",
-    title: "Coalition Building",
-    description: "Create a network of advocates across teams. Sustainable adoption requires champions who can support peers and drive grassroots momentum.",
-    icon: "🤝",
+    title: "Core Workflow Integration",
+    description: "v0 plugged into design systems, repos, and sprints. Not a side tool, but embedded in day-to-day workflows.",
+    icon: "⚙️",
   },
 ];
 
@@ -450,8 +450,7 @@ export const threeLayers = [
     bullets: [
       "Stays visibly engaged",
       "Communicates why this matters",
-      "Asks about progress",
-      "Celebrates wins",
+      "Asks about progress and celebrates wins",
     ],
   },
   {
