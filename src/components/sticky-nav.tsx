@@ -90,7 +90,7 @@ export function StickyNav() {
           : "opacity-0 -translate-y-full pointer-events-none"
       )}
     >
-      <div className="glass-card border-b border-white/5 shadow-lg shadow-black/10">
+      <div className="bg-white/95 backdrop-blur-sm border-b border-[var(--border)] shadow-sm">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -98,7 +98,7 @@ export function StickyNav() {
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className="font-display font-bold text-lg text-foreground hover:text-[var(--accent-cyan)] transition-colors cursor-pointer touch-action-manipulation"
+              className="font-display font-bold text-lg text-black hover:text-[#0070F3] transition-colors cursor-pointer touch-action-manipulation"
             >
               v0 Playbook
             </button>
@@ -108,13 +108,12 @@ export function StickyNav() {
               {/* Sliding underline indicator */}
               <span
                 className={cn(
-                  "absolute bottom-0 h-0.5 rounded-full bg-[var(--accent-cyan)] transition-all duration-300 ease-out",
+                  "absolute bottom-0 h-0.5 rounded-full bg-[#0070F3] transition-all duration-300 ease-out",
                   showIndicator ? "opacity-100" : "opacity-0"
                 )}
                 style={{
                   left: indicatorStyle.left,
                   width: indicatorStyle.width,
-                  boxShadow: "0 0 8px var(--glow-cyan)",
                 }}
               />
 
@@ -128,8 +127,8 @@ export function StickyNav() {
                   className={cn(
                     "relative px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 touch-action-manipulation",
                     activeSection === section.id
-                      ? "text-[var(--accent-cyan)]"
-                      : "text-[var(--text-secondary)] hover:text-foreground"
+                      ? "text-[#0070F3]"
+                      : "text-[#666666] hover:text-black"
                   )}
                 >
                   {section.title}
@@ -163,7 +162,7 @@ function MobileNav({ sections, activeSection, scrollToSection }: MobileNavProps)
     <div className="md:hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 text-[var(--text-secondary)] hover:text-foreground transition-colors rounded-md hover:bg-white/5 touch-action-manipulation"
+        className="p-2 text-[#666666] hover:text-black transition-colors rounded-md hover:bg-[#FAFAFA] touch-action-manipulation"
         aria-label="Toggle navigation"
         aria-expanded={isOpen}
       >
@@ -206,7 +205,7 @@ function MobileNav({ sections, activeSection, scrollToSection }: MobileNavProps)
       {/* Mobile menu dropdown */}
       <div
         className={cn(
-          "absolute top-16 left-0 right-0 glass-card border-b border-white/5 transition-all duration-300 overflow-hidden",
+          "absolute top-16 left-0 right-0 bg-white border-b border-[#EAEAEA] shadow-lg transition-all duration-300 overflow-hidden",
           isOpen ? "opacity-100 max-h-[400px]" : "opacity-0 max-h-0 pointer-events-none"
         )}
       >
@@ -221,12 +220,12 @@ function MobileNav({ sections, activeSection, scrollToSection }: MobileNavProps)
               className={cn(
                 "w-full px-4 py-3 text-sm text-left rounded-lg transition-colors flex items-center gap-3 touch-action-manipulation",
                 activeSection === section.id
-                  ? "text-[var(--accent-cyan)] bg-[var(--accent-cyan)]/10"
-                  : "text-[var(--text-secondary)] hover:text-foreground hover:bg-white/5"
+                  ? "text-[#0070F3] bg-[rgba(0,112,243,0.05)]"
+                  : "text-[#666666] hover:text-black hover:bg-[#FAFAFA]"
               )}
             >
               {activeSection === section.id && (
-                <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-cyan)]" aria-hidden="true" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0070F3]" aria-hidden="true" />
               )}
               {section.title}
             </button>

@@ -10,14 +10,14 @@ export function ScenarioCard({ scenario, className }: ScenarioCardProps) {
   return (
     <div
       className={cn(
-        "border border-[var(--border)] rounded-xl bg-[var(--bg-surface)] overflow-hidden",
-        "transition-all duration-300 hover:border-[var(--accent-cyan)]/20 hover:shadow-lg hover:shadow-[var(--glow-cyan)]",
+        "border border-[#EAEAEA] rounded-xl bg-white overflow-hidden",
+        "transition-all duration-300 hover:border-black",
         className
       )}
     >
       {/* Header */}
-      <div className="px-5 py-4 bg-[var(--bg-elevated)] border-b border-[var(--border)]">
-        <h4 className="font-display font-semibold text-foreground tracking-tight">
+      <div className="px-5 py-4 bg-[#FAFAFA] border-b border-[#EAEAEA]">
+        <h4 className="font-display font-semibold text-black tracking-tight">
           {scenario.title}
         </h4>
       </div>
@@ -27,7 +27,7 @@ export function ScenarioCard({ scenario, className }: ScenarioCardProps) {
         {/* Problem */}
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <span className="w-6 h-6 rounded-full bg-[var(--accent-rose)]/15 text-[var(--accent-rose)] flex items-center justify-center" aria-hidden="true">
+            <span className="w-6 h-6 rounded-full bg-[#FEE2E2] text-[#DC2626] flex items-center justify-center" aria-hidden="true">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
@@ -45,9 +45,9 @@ export function ScenarioCard({ scenario, className }: ScenarioCardProps) {
                 <line x1="12" x2="12.01" y1="16" y2="16" />
               </svg>
             </span>
-            <span className="text-sm font-medium text-[var(--accent-rose)]">Problem</span>
+            <span className="text-sm font-medium text-[#DC2626]">Problem</span>
           </div>
-          <p className="text-sm text-[var(--text-secondary)] pl-8 leading-relaxed">
+          <p className="text-sm text-[#666666] pl-8 leading-relaxed">
             {scenario.problem}
           </p>
         </div>
@@ -55,7 +55,7 @@ export function ScenarioCard({ scenario, className }: ScenarioCardProps) {
         {/* Solution */}
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <span className="w-6 h-6 rounded-full bg-[var(--accent-emerald)]/15 text-[var(--accent-emerald)] flex items-center justify-center" aria-hidden="true">
+            <span className="w-6 h-6 rounded-full bg-[rgba(0,112,243,0.1)] text-[#0070F3] flex items-center justify-center" aria-hidden="true">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
@@ -71,9 +71,9 @@ export function ScenarioCard({ scenario, className }: ScenarioCardProps) {
                 <path d="M20 6 9 17l-5-5" />
               </svg>
             </span>
-            <span className="text-sm font-medium text-[var(--accent-emerald)]">Solution</span>
+            <span className="text-sm font-medium text-[#0070F3]">Solution</span>
           </div>
-          <p className="text-sm text-[var(--text-primary)] pl-8 leading-relaxed">
+          <p className="text-sm text-black pl-8 leading-relaxed">
             {scenario.solution}
           </p>
         </div>

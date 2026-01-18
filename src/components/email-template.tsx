@@ -11,18 +11,18 @@ const audienceConfig: Record<
 > = {
   champion: {
     label: "To: Champion",
-    color: "text-[var(--accent-violet)]",
-    bgColor: "bg-[var(--accent-violet)]/10 border-[var(--accent-violet)]/20",
+    color: "text-[#0070F3]",
+    bgColor: "bg-[rgba(0,112,243,0.05)] border-[rgba(0,112,243,0.2)]",
   },
   team: {
     label: "To: Team",
-    color: "text-[var(--accent-cyan)]",
-    bgColor: "bg-[var(--accent-cyan)]/10 border-[var(--accent-cyan)]/20",
+    color: "text-black",
+    bgColor: "bg-[#FAFAFA] border-[#EAEAEA]",
   },
   sponsor: {
     label: "To: Sponsor",
-    color: "text-emerald-400",
-    bgColor: "bg-emerald-400/10 border-emerald-400/20",
+    color: "text-[#666666]",
+    bgColor: "bg-[#FAFAFA] border-[#EAEAEA]",
   },
 };
 
@@ -32,13 +32,13 @@ const fromConfig: Record<
 > = {
   sponsor: {
     label: "From: Sponsor",
-    color: "text-emerald-400",
-    bgColor: "bg-emerald-400/10 border-emerald-400/20",
+    color: "text-[#666666]",
+    bgColor: "bg-[#FAFAFA] border-[#EAEAEA]",
   },
   champion: {
     label: "From: Champion",
-    color: "text-[var(--accent-violet)]",
-    bgColor: "bg-[var(--accent-violet)]/10 border-[var(--accent-violet)]/20",
+    color: "text-[#0070F3]",
+    bgColor: "bg-[rgba(0,112,243,0.05)] border-[rgba(0,112,243,0.2)]",
   },
 };
 
@@ -87,19 +87,19 @@ export function EmailTemplate({ template, className }: EmailTemplateProps) {
         <CopyButton text={fullContent} />
       </div>
 
-      <div className="group glass-card rounded-xl overflow-hidden transition-all duration-300 hover:border-[var(--accent-cyan)]/30 hover:shadow-lg hover:shadow-[var(--glow-cyan)]">
+      <div className="group border border-[#EAEAEA] rounded-xl overflow-hidden transition-all duration-300 hover:border-black bg-white">
         {/* Subject line */}
-        <div className="px-5 py-3 border-b border-white/5 bg-white/[0.02] relative overflow-hidden">
-          {/* Subtle glow on hover */}
+        <div className="px-5 py-3 border-b border-[#EAEAEA] bg-[#FAFAFA] relative overflow-hidden">
+          {/* Subtle hover effect */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            <div className="absolute inset-0 bg-gradient-to-r from-[var(--accent-cyan)]/5 to-transparent" />
+            <div className="absolute inset-0 bg-white" />
           </div>
 
           <div className="flex items-center gap-2 relative">
-            <span className="text-xs text-[var(--text-muted)] uppercase tracking-wider font-medium">
+            <span className="text-xs text-[#888888] uppercase tracking-wider font-medium">
               Subject:
             </span>
-            <span className="text-sm font-medium text-[var(--accent-cyan)] group-hover:text-[var(--accent-cyan)] transition-colors">
+            <span className="text-sm font-medium text-[#0070F3] group-hover:text-black transition-colors">
               {template.subject}
             </span>
           </div>
