@@ -26,7 +26,7 @@ function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: strin
   }, [value]);
 
   return (
-    <span>
+    <span aria-live="polite" aria-atomic="true" className="tabular-nums">
       {count}
       {suffix}
     </span>
@@ -73,7 +73,7 @@ export function Hero() {
 
         {/* Main title */}
         <h1
-          className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-6 opacity-0 animate-fade-in-up"
+          className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-6 opacity-0 animate-fade-in-up text-balance"
           style={{ animationDelay: "100ms", animationFillMode: "forwards" }}
         >
           <span className="gradient-text text-glow">{heroData.title}</span>
@@ -145,7 +145,7 @@ export function Hero() {
         >
           <a
             href="#timeline"
-            className="btn-primary inline-flex items-center gap-2 group"
+            className="btn-primary inline-flex items-center gap-2 group touch-action-manipulation"
           >
             Get Started
             <svg
@@ -159,11 +159,12 @@ export function Hero() {
               strokeLinecap="round"
               strokeLinejoin="round"
               className="transition-transform group-hover:translate-y-0.5"
+              aria-hidden="true"
             >
               <path d="m6 9 6 6 6-6" />
             </svg>
           </a>
-          <a href="#abc" className="btn-secondary inline-flex items-center gap-2">
+          <a href="#abc" className="btn-secondary inline-flex items-center gap-2 touch-action-manipulation">
             Learn the Framework
           </a>
         </div>
@@ -176,6 +177,7 @@ export function Hero() {
       <div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in"
         style={{ animationDelay: "800ms", animationFillMode: "forwards" }}
+        aria-hidden="true"
       >
         <div className="flex flex-col items-center gap-2 text-[var(--text-muted)]">
           <span className="text-xs uppercase tracking-widest">Scroll</span>

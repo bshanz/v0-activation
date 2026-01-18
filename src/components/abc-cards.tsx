@@ -165,7 +165,7 @@ export function ABCCards() {
                   {letter}
                 </div>
                 {i < 2 && (
-                  <svg width="32" height="2" className="text-[var(--border)]">
+                  <svg width="32" height="2" className="text-[var(--border)]" aria-hidden="true">
                     <line
                       x1="0"
                       y1="1"
@@ -190,6 +190,7 @@ export function ABCCards() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                aria-hidden="true"
               >
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
