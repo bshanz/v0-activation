@@ -7,24 +7,24 @@ import { useEffect, useRef, useState } from "react";
 const cardColors = [
   {
     badge: "letter-badge-cyan",
-    border: "hover:border-[var(--accent-cyan)]/30",
-    glow: "group-hover:shadow-[0_8px_32px_-8px_rgba(6,182,212,0.3)]",
-    text: "text-[var(--accent-cyan)]",
-    bg: "bg-[var(--accent-cyan)]",
+    border: "hover:border-[#0070F3]",
+    glow: "group-hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]",
+    text: "text-[#0070F3]",
+    bg: "bg-[#0070F3]",
   },
   {
     badge: "letter-badge-violet",
-    border: "hover:border-[var(--accent-violet)]/30",
-    glow: "group-hover:shadow-[0_8px_32px_-8px_rgba(139,92,246,0.3)]",
-    text: "text-[var(--accent-violet)]",
-    bg: "bg-[var(--accent-violet)]",
+    border: "hover:border-black",
+    glow: "group-hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]",
+    text: "text-black",
+    bg: "bg-black",
   },
   {
     badge: "letter-badge-rose",
-    border: "hover:border-[var(--accent-rose)]/30",
-    glow: "group-hover:shadow-[0_8px_32px_-8px_rgba(244,63,94,0.3)]",
-    text: "text-[var(--accent-rose)]",
-    bg: "bg-[var(--accent-rose)]",
+    border: "hover:border-[#666666]",
+    glow: "group-hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]",
+    text: "text-[#666666]",
+    bg: "bg-[#666666]",
   },
 ];
 
@@ -74,11 +74,11 @@ export function ABCCards() {
               : "opacity-0 translate-y-8"
           )}
         >
-          <span className="badge-accent mb-4 inline-block">Framework</span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+          <span className="badge-accent mb-4 inline-block px-5 py-1.5">Framework</span>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight text-black">
             The ABC Framework
           </h2>
-          <p className="text-[var(--text-secondary)] max-w-2xl mx-auto text-lg">
+          <p className="text-[#666666] max-w-2xl mx-auto text-lg">
             A proven three-phase approach to driving sustainable technology
             adoption in your organization.
           </p>

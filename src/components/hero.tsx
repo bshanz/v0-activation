@@ -39,19 +39,49 @@ export function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center px-4 py-32 overflow-hidden"
     >
-      {/* Atmospheric background spotlights */}
+      {/* Background gradient blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Top left blue blob */}
         <div
-          className="spotlight opacity-40"
-          style={{ top: "-20%", left: "-10%" }}
+          className="blob blob-blue"
+          style={{
+            width: "600px",
+            height: "600px",
+            top: "-15%",
+            left: "-10%",
+          }}
         />
+        {/* Top right purple blob */}
         <div
-          className="spotlight spotlight-violet opacity-30"
-          style={{ top: "10%", right: "-15%" }}
+          className="blob blob-purple"
+          style={{
+            width: "500px",
+            height: "500px",
+            top: "5%",
+            right: "-8%",
+          }}
         />
+        {/* Bottom center cyan blob */}
         <div
-          className="spotlight opacity-20"
-          style={{ bottom: "-30%", left: "30%" }}
+          className="blob blob-cyan"
+          style={{
+            width: "700px",
+            height: "700px",
+            bottom: "-20%",
+            left: "50%",
+            transform: "translateX(-50%)",
+          }}
+        />
+        {/* Additional subtle blue blob bottom left */}
+        <div
+          className="blob blob-blue"
+          style={{
+            width: "400px",
+            height: "400px",
+            bottom: "10%",
+            left: "-5%",
+            opacity: 0.5,
+          }}
         />
       </div>
 
@@ -59,29 +89,29 @@ export function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         {/* Badge */}
         <div
-          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-card mb-8 opacity-0 animate-fade-in-down"
+          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#FAFAFA] border border-[#EAEAEA] mb-8 opacity-0 animate-fade-in-down"
           style={{ animationDelay: "0ms", animationFillMode: "forwards" }}
         >
           <span className="relative flex h-2.5 w-2.5">
-            <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+            <span className="absolute inline-flex h-full w-full rounded-full bg-[#0070F3] opacity-75 animate-ping" />
+            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#0070F3]" />
           </span>
-          <span className="text-sm text-[var(--text-secondary)] font-medium tracking-wide">
+          <span className="text-sm text-[#666666] font-medium tracking-wide">
             Enterprise Change Management
           </span>
         </div>
 
         {/* Main title */}
         <h1
-          className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-6 opacity-0 animate-fade-in-up text-balance"
+          className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-6 opacity-0 animate-fade-in-up text-balance text-black"
           style={{ animationDelay: "100ms", animationFillMode: "forwards" }}
         >
-          <span className="gradient-text text-glow">{heroData.title}</span>
+          {heroData.title}
         </h1>
 
         {/* Subtitle */}
         <p
-          className="text-xl sm:text-2xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-12 font-medium opacity-0 animate-fade-in-up"
+          className="text-xl sm:text-2xl text-[#666666] max-w-2xl mx-auto mb-12 font-medium opacity-0 animate-fade-in-up"
           style={{ animationDelay: "200ms", animationFillMode: "forwards" }}
         >
           {heroData.subtitle}
@@ -94,46 +124,47 @@ export function Hero() {
         >
           {/* Core Insight label */}
           <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="h-px w-8 bg-gradient-to-r from-transparent to-[var(--accent-violet)]/50" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--accent-violet)]">
+            <div className="h-px w-8 bg-gradient-to-r from-transparent to-[#0070F3]" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#0070F3]">
               Active Sponsorship Triples Success Rates
             </span>
-            <div className="h-px w-8 bg-gradient-to-l from-transparent to-[var(--accent-violet)]/50" />
+            <div className="h-px w-8 bg-gradient-to-l from-transparent to-[#0070F3]" />
           </div>
 
-          <div className="gradient-border glow animate-glow-pulse p-8 sm:p-10">
+          <div className="relative bg-white border border-[#EAEAEA] rounded-xl p-8 sm:p-10">
+
             <div className="flex items-center justify-center gap-6 sm:gap-10">
               {/* Primary stat */}
               <div className="text-center">
-                <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-[var(--accent-cyan)] font-display">
+                <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-[#0070F3] font-display">
                   <AnimatedCounter value={79} suffix="%" />
                 </div>
-                <div className="text-sm text-[var(--text-muted)] mt-2 font-medium uppercase tracking-wider">
+                <div className="text-sm text-[#888888] mt-2 font-medium uppercase tracking-wider">
                   with sponsor
                 </div>
               </div>
 
               {/* Divider */}
               <div className="flex flex-col items-center gap-2">
-                <div className="w-px h-8 bg-gradient-to-b from-transparent via-[var(--border)] to-transparent" />
-                <span className="text-lg text-[var(--text-muted)] font-light">vs</span>
-                <div className="w-px h-8 bg-gradient-to-b from-transparent via-[var(--border)] to-transparent" />
+                <div className="w-px h-8 bg-gradient-to-b from-transparent via-[#EAEAEA] to-transparent" />
+                <span className="text-lg text-[#888888] font-light">vs</span>
+                <div className="w-px h-8 bg-gradient-to-b from-transparent via-[#EAEAEA] to-transparent" />
               </div>
 
               {/* Secondary stat */}
               <div className="text-center">
-                <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-[var(--text-muted)] font-display">
+                <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-[#888888] font-display">
                   <AnimatedCounter value={27} suffix="%" />
                 </div>
-                <div className="text-sm text-[var(--text-muted)] mt-2 font-medium uppercase tracking-wider">
+                <div className="text-sm text-[#888888] mt-2 font-medium uppercase tracking-wider">
                   without
                 </div>
               </div>
             </div>
 
             {/* Prosci attribution */}
-            <p className="mt-8 text-sm text-[var(--text-secondary)] text-center border-t border-[var(--border)] pt-6 leading-relaxed">
-              {heroData.coreInsight}
+            <p className="mt-8 text-sm text-[#666666] text-center border-t border-[#EAEAEA] pt-6 leading-relaxed">
+              <a href="https://www.prosci.com/methodology-overview" target="_blank" rel="noopener noreferrer" className="text-[#0070F3] hover:underline">Prosci</a> research shows projects with engaged sponsors are 79% likely to meet objectives versus 27% for those without. This playbook makes sponsor activation incredibly easy.
             </p>
           </div>
         </div>
@@ -145,7 +176,7 @@ export function Hero() {
         >
           <a
             href="#timeline"
-            className="btn-primary inline-flex items-center gap-2 group touch-action-manipulation"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-[#333333] transition-colors duration-150 group touch-action-manipulation"
           >
             Get Started
             <svg
@@ -164,7 +195,10 @@ export function Hero() {
               <path d="m6 9 6 6 6-6" />
             </svg>
           </a>
-          <a href="#abc" className="btn-secondary inline-flex items-center gap-2 touch-action-manipulation">
+          <a
+            href="#abc"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-[#EAEAEA] text-black font-medium rounded-lg hover:border-black transition-colors duration-150 touch-action-manipulation"
+          >
             Learn the Framework
           </a>
         </div>
@@ -179,10 +213,9 @@ export function Hero() {
         style={{ animationDelay: "800ms", animationFillMode: "forwards" }}
         aria-hidden="true"
       >
-        <div className="flex flex-col items-center gap-2 text-[var(--text-muted)]">
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
-          <div className="w-5 h-8 rounded-full border border-[var(--border)] flex items-start justify-center p-1.5">
-            <div className="w-1 h-2 rounded-full bg-[var(--accent-cyan)] animate-bounce" />
+        <div className="flex flex-col items-center gap-2 text-[#888888]">
+          <div className="w-5 h-8 rounded-full border border-[#EAEAEA] flex items-start justify-center p-1.5">
+            <div className="w-1 h-2 rounded-full bg-[#0070F3] animate-bounce" />
           </div>
         </div>
       </div>

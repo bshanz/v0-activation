@@ -36,10 +36,10 @@ export function CollapsibleSection({
       id={id}
       className={cn("px-4 py-12 sm:py-16 relative", className)}
     >
-      {/* Gradient section divider */}
+      {/* Section divider */}
       {showDivider && (
         <div className="absolute top-0 left-0 right-0 h-px">
-          <div className="max-w-6xl mx-auto h-full bg-gradient-to-r from-transparent via-[var(--accent-cyan)]/20 to-transparent" />
+          <div className="max-w-6xl mx-auto h-full bg-[#EAEAEA]" />
         </div>
       )}
 
@@ -52,33 +52,33 @@ export function CollapsibleSection({
           <AccordionItem
             value={id}
             className={cn(
-              "border border-[var(--border)] rounded-xl bg-[var(--bg-surface)] overflow-hidden",
+              "border border-[#EAEAEA] rounded-xl bg-white overflow-hidden",
               "transition-all duration-500 ease-out",
-              "hover:border-[var(--accent-cyan)]/20 hover:shadow-lg hover:shadow-[var(--glow-cyan)]",
+              "hover:border-black",
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-6"
             )}
           >
-            <AccordionTrigger className="px-6 sm:px-8 py-5 sm:py-6 hover:no-underline group data-[state=open]:border-b data-[state=open]:border-[var(--border)] relative overflow-hidden">
-              {/* Header glow effect on hover */}
+            <AccordionTrigger className="px-6 sm:px-8 py-5 sm:py-6 hover:no-underline group data-[state=open]:border-b data-[state=open]:border-[#EAEAEA] relative overflow-hidden">
+              {/* Header hover effect */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-r from-[var(--accent-cyan)]/5 via-transparent to-[var(--accent-violet)]/5" />
+                <div className="absolute inset-0 bg-[#FAFAFA]" />
               </div>
 
               <div className="flex flex-col items-start gap-1.5 text-left relative">
-                <h2 className="font-display text-xl sm:text-2xl font-bold group-hover:text-[var(--accent-cyan)] transition-colors duration-300 tracking-tight">
+                <h2 className="font-display text-xl sm:text-2xl font-bold text-black group-hover:text-[#0070F3] transition-colors duration-300 tracking-tight">
                   {title}
                 </h2>
                 {subtitle && (
-                  <p className="text-sm text-[var(--text-muted)] group-hover:text-[var(--text-secondary)] transition-colors duration-300">
+                  <p className="text-sm text-[#888888] group-hover:text-[#666666] transition-colors duration-300">
                     {subtitle}
                   </p>
                 )}
               </div>
             </AccordionTrigger>
             <AccordionContent className="px-6 sm:px-8 pb-6 sm:pb-8 pt-6">
-              <div className="prose prose-invert prose-sm max-w-none">
+              <div className="prose prose-stone prose-sm max-w-none">
                 {children}
               </div>
             </AccordionContent>

@@ -28,9 +28,9 @@ export function CopyButton({ text, className, variant = "default" }: CopyButtonP
         onClick={handleCopy}
         className={cn(
           "p-2 rounded-lg transition-all duration-200",
-          "text-[var(--text-muted)] hover:text-[var(--text-secondary)]",
-          "hover:bg-white/5",
-          copied && "text-[var(--accent-emerald)] bg-[var(--accent-emerald)]/10",
+          "text-[#888888] hover:text-black",
+          "hover:bg-[#FAFAFA]",
+          copied && "text-[#0070F3] bg-[rgba(0,112,243,0.1)]",
           className
         )}
         aria-label={copied ? "Copied!" : "Copy to clipboard"}
@@ -77,10 +77,10 @@ export function CopyButton({ text, className, variant = "default" }: CopyButtonP
       onClick={handleCopy}
       className={cn(
         "inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium",
-        "border border-[var(--border)] bg-[var(--bg-surface)]",
+        "border border-[#EAEAEA] bg-white",
         "transition-all duration-200",
-        "hover:bg-[var(--bg-elevated)] hover:border-[var(--accent-cyan)]/30",
-        copied && "border-[var(--accent-emerald)] bg-[var(--accent-emerald)]/10 text-[var(--accent-emerald)]",
+        "hover:bg-[#FAFAFA] hover:border-black",
+        copied && "border-[#0070F3] bg-[rgba(0,112,243,0.1)] text-[#0070F3]",
         className
       )}
     >
