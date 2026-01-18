@@ -18,7 +18,7 @@ export function PushbackCard({ item, className }: PushbackCardProps) {
       {/* Objection */}
       <div className="px-5 py-4 bg-[var(--bg-elevated)] border-b border-[var(--border)]">
         <div className="flex items-start gap-3">
-          <span className="flex-shrink-0 mt-0.5 text-[var(--accent-rose)]">
+          <span className="flex-shrink-0 mt-0.5 text-[var(--accent-rose)]" aria-hidden="true">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -29,6 +29,7 @@ export function PushbackCard({ item, className }: PushbackCardProps) {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              aria-hidden="true"
             >
               <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
             </svg>
@@ -42,7 +43,7 @@ export function PushbackCard({ item, className }: PushbackCardProps) {
       {/* Response */}
       <div className="p-5">
         <div className="flex items-start gap-3">
-          <span className="flex-shrink-0 mt-0.5 text-[var(--accent-cyan)]">
+          <span className="flex-shrink-0 mt-0.5 text-[var(--accent-cyan)]" aria-hidden="true">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -53,6 +54,7 @@ export function PushbackCard({ item, className }: PushbackCardProps) {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              aria-hidden="true"
             >
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
             </svg>

@@ -27,7 +27,7 @@ export function ScenarioCard({ scenario, className }: ScenarioCardProps) {
         {/* Problem */}
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <span className="w-6 h-6 rounded-full bg-[var(--accent-rose)]/15 text-[var(--accent-rose)] flex items-center justify-center">
+            <span className="w-6 h-6 rounded-full bg-[var(--accent-rose)]/15 text-[var(--accent-rose)] flex items-center justify-center" aria-hidden="true">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
@@ -38,6 +38,7 @@ export function ScenarioCard({ scenario, className }: ScenarioCardProps) {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                aria-hidden="true"
               >
                 <circle cx="12" cy="12" r="10" />
                 <line x1="12" x2="12" y1="8" y2="12" />
@@ -54,7 +55,7 @@ export function ScenarioCard({ scenario, className }: ScenarioCardProps) {
         {/* Solution */}
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <span className="w-6 h-6 rounded-full bg-[var(--accent-emerald)]/15 text-[var(--accent-emerald)] flex items-center justify-center">
+            <span className="w-6 h-6 rounded-full bg-[var(--accent-emerald)]/15 text-[var(--accent-emerald)] flex items-center justify-center" aria-hidden="true">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
@@ -65,6 +66,7 @@ export function ScenarioCard({ scenario, className }: ScenarioCardProps) {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                aria-hidden="true"
               >
                 <path d="M20 6 9 17l-5-5" />
               </svg>

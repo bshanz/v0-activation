@@ -509,3 +509,77 @@ body::before {
   background: var(--accent-rose);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 4px 16px -4px rgba(244, 63, 94, 0.5);
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ACCESSIBILITY ENHANCEMENTS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Scroll margin for sticky nav offset */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Tabular numbers for consistent stat display */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Enhanced focus states for interactive elements */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+/* Touch action for faster tap response */
+.touch-action-manipulation {
+  touch-action: manipulation;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   REDUCED MOTION PREFERENCES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-fade-in-up,
+  .animate-fade-in-down,
+  .animate-fade-in,
+  .animate-slide-in-left,
+  .animate-slide-in-right,
+  .animate-scale-in,
+  .animate-glow-pulse,
+  .animate-float,
+  .animate-ping,
+  .animate-bounce {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .spotlight {
+    filter: blur(40px); /* Reduce blur intensity */
+  }
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

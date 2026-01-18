@@ -98,7 +98,7 @@ export function StickyNav() {
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className="font-display font-bold text-lg text-foreground hover:text-[var(--accent-cyan)] transition-colors cursor-pointer"
+              className="font-display font-bold text-lg text-foreground hover:text-[var(--accent-cyan)] transition-colors cursor-pointer touch-action-manipulation"
             >
               v0 Playbook
             </button>
@@ -126,7 +126,7 @@ export function StickyNav() {
                   }}
                   onClick={() => scrollToSection(section.id)}
                   className={cn(
-                    "relative px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200",
+                    "relative px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 touch-action-manipulation",
                     activeSection === section.id
                       ? "text-[var(--accent-cyan)]"
                       : "text-[var(--text-secondary)] hover:text-foreground"
@@ -163,8 +163,9 @@ function MobileNav({ sections, activeSection, scrollToSection }: MobileNavProps)
     <div className="md:hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 text-[var(--text-secondary)] hover:text-foreground transition-colors rounded-md hover:bg-white/5"
+        className="p-2 text-[var(--text-secondary)] hover:text-foreground transition-colors rounded-md hover:bg-white/5 touch-action-manipulation"
         aria-label="Toggle navigation"
+        aria-expanded={isOpen}
       >
         {isOpen ? (
           <svg
@@ -177,6 +178,7 @@ function MobileNav({ sections, activeSection, scrollToSection }: MobileNavProps)
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
+            aria-hidden="true"
           >
             <path d="M18 6 6 18" />
             <path d="m6 6 12 12" />
@@ -192,6 +194,7 @@ function MobileNav({ sections, activeSection, scrollToSection }: MobileNavProps)
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
+            aria-hidden="true"
           >
             <line x1="4" x2="20" y1="12" y2="12" />
             <line x1="4" x2="20" y1="6" y2="6" />
@@ -216,14 +219,14 @@ function MobileNav({ sections, activeSection, scrollToSection }: MobileNavProps)
                 setIsOpen(false);
               }}
               className={cn(
-                "w-full px-4 py-3 text-sm text-left rounded-lg transition-colors flex items-center gap-3",
+                "w-full px-4 py-3 text-sm text-left rounded-lg transition-colors flex items-center gap-3 touch-action-manipulation",
                 activeSection === section.id
                   ? "text-[var(--accent-cyan)] bg-[var(--accent-cyan)]/10"
                   : "text-[var(--text-secondary)] hover:text-foreground hover:bg-white/5"
               )}
             >
               {activeSection === section.id && (
-                <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-cyan)]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-cyan)]" aria-hidden="true" />
               )}
               {section.title}
             </button>

@@ -39,7 +39,7 @@ export default function Home() {
   const month3Templates = emailTemplates.filter((t) => t.id.includes("month3"));
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <StickyNav />
 
       {/* Hero Section */}
