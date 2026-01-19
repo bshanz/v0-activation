@@ -63,7 +63,7 @@ export const abcCards: ABCCard[] = [
   {
     letter: "A",
     title: "Executive Sponsorship & Alignment",
-    description: "Ties \"the why\" to clear goals and business outcomes. Execs reinforcing usage and asking for progress.",
+    description: "Articulates the \"why\" and ties it to clear goals and business outcomes. Execs reinforce usage, ask for progress, and celebrate wins.",
     icon: "🎯",
   },
   {
