@@ -11,10 +11,10 @@ export function TalkingPoints({ talkingPoint, className }: TalkingPointsProps) {
     <div className={cn("space-y-4", className)}>
       <h4 className="font-display text-base font-semibold tracking-tight text-black">{talkingPoint.title}</h4>
 
-      <div className="relative border-l-2 border-[#0070F3] bg-[#FAFAFA] rounded-r-xl p-5 space-y-4">
+      <div className="relative border-l-2 border-[#0070F3] bg-[#FAFAFA] rounded-r-xl p-4 sm:p-5 space-y-3 sm:space-y-4">
         {talkingPoint.points.map((point, index) => (
-          <div key={index} className="flex gap-4">
-            <span className="flex-shrink-0 w-7 h-7 rounded-lg bg-[rgba(0,112,243,0.1)] text-[#0070F3] text-xs font-bold flex items-center justify-center">
+          <div key={index} className="flex gap-3 sm:gap-4">
+            <span className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-[rgba(0,112,243,0.1)] text-[#0070F3] text-xs font-bold flex items-center justify-center">
               {index + 1}
             </span>
             <p className="text-sm text-black leading-relaxed pt-0.5">{point}</p>

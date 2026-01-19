@@ -31,7 +31,8 @@ export function ActionTable({
         )}
       </div>
 
-      <div className="border border-[var(--border)] rounded-xl overflow-hidden">
+      {/* Desktop table view */}
+      <div className="hidden md:block border border-[var(--border)] rounded-xl overflow-hidden">
         <Table>
           <TableHeader>
             <TableRow className="bg-[var(--bg-elevated)] hover:bg-[var(--bg-elevated)] border-b border-[var(--border)]">
@@ -60,6 +61,36 @@ export function ActionTable({
             ))}
           </TableBody>
         </Table>
+      </div>
+
+      {/* Mobile card view */}
+      <div className="md:hidden space-y-3">
+        {actions.map((action, index) => (
+          <div
+            key={action.week}
+            className={cn(
+              "border border-[var(--border)] rounded-xl p-4 space-y-2",
+              index % 2 === 0 ? "bg-[var(--bg-surface)]" : "bg-[var(--bg-elevated)]"
+            )}
+          >
+            <div className="flex items-center justify-between">
+              <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-[var(--accent-cyan)]/10 text-[var(--accent-cyan)] text-sm font-semibold">
+                {action.week}
+              </span>
+            </div>
+            <div>
+              <p className="text-[var(--text-primary)] font-medium text-sm leading-relaxed">
+                {action.action}
+              </p>
+            </div>
+            <div className="pt-1 border-t border-[var(--border)]">
+              <p className="text-[var(--text-secondary)] text-xs leading-relaxed">
+                <span className="font-medium text-[var(--text-muted)] uppercase tracking-wider">Outcome: </span>
+                {action.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -90,7 +121,8 @@ export function GenericTable({
         )}
       </div>
 
-      <div className="border border-[var(--border)] rounded-xl overflow-x-auto">
+      {/* Desktop table view */}
+      <div className="hidden md:block border border-[var(--border)] rounded-xl overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow className="bg-[var(--bg-elevated)] hover:bg-[var(--bg-elevated)] border-b border-[var(--border)]">
@@ -122,6 +154,43 @@ export function GenericTable({
             ))}
           </TableBody>
         </Table>
+      </div>
+
+      {/* Mobile card view */}
+      <div className="md:hidden space-y-3">
+        {rows.map((row, index) => {
+          const values = Object.values(row);
+          const keys = Object.keys(row);
+          return (
+            <div
+              key={index}
+              className={cn(
+                "border border-[var(--border)] rounded-xl p-4 space-y-3",
+                index % 2 === 0 ? "bg-[var(--bg-surface)]" : "bg-[var(--bg-elevated)]"
+              )}
+            >
+              {/* First value as header */}
+              <div className="flex items-center">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-[var(--accent-cyan)]/10 text-[var(--accent-cyan)] text-sm font-semibold">
+                  {values[0]}
+                </span>
+              </div>
+              {/* Remaining values */}
+              <div className="space-y-2">
+                {values.slice(1).map((cell, cellIndex) => (
+                  <div key={cellIndex} className="text-sm">
+                    <span className="font-medium text-[var(--text-muted)] text-xs uppercase tracking-wider">
+                      {columns[cellIndex + 1]}:
+                    </span>
+                    <p className="text-[var(--text-primary)] mt-0.5 leading-relaxed">
+                      {cell}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

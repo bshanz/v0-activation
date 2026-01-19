@@ -39,45 +39,37 @@ export function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center px-4 py-32 overflow-hidden"
     >
-      {/* Background gradient blobs */}
+      {/* Background gradient blobs - responsive sizes using clamp */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Top left blue blob */}
         <div
-          className="blob blob-blue"
+          className="blob blob-blue w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px]"
           style={{
-            width: "600px",
-            height: "600px",
             top: "-15%",
             left: "-10%",
           }}
         />
         {/* Top right purple blob */}
         <div
-          className="blob blob-purple"
+          className="blob blob-purple w-[220px] h-[220px] sm:w-[350px] sm:h-[350px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px]"
           style={{
-            width: "500px",
-            height: "500px",
             top: "5%",
             right: "-8%",
           }}
         />
         {/* Bottom center cyan blob */}
         <div
-          className="blob blob-cyan"
+          className="blob blob-cyan w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] md:w-[550px] md:h-[550px] lg:w-[700px] lg:h-[700px]"
           style={{
-            width: "700px",
-            height: "700px",
             bottom: "-20%",
             left: "50%",
             transform: "translateX(-50%)",
           }}
         />
-        {/* Additional subtle blue blob bottom left */}
+        {/* Additional subtle blue blob bottom left - hidden on mobile */}
         <div
-          className="blob blob-blue"
+          className="blob blob-blue hidden sm:block w-[250px] h-[250px] md:w-[320px] md:h-[320px] lg:w-[400px] lg:h-[400px]"
           style={{
-            width: "400px",
-            height: "400px",
             bottom: "10%",
             left: "-5%",
             opacity: 0.5,

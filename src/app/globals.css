@@ -146,7 +146,14 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 17px; /* Slightly larger base for better readability */
+  font-size: 16px; /* Base size for mobile */
+}
+
+/* Larger base font size for tablets and up */
+@media (min-width: 640px) {
+  html {
+    font-size: 17px;
+  }
 }
 
 /* No noise texture for clean Vercel look */
@@ -575,4 +582,63 @@ a:focus-visible,
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVENESS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Prevent horizontal overflow on mobile */
+body {
+  overflow-x: hidden;
+}
+
+/* Better text wrapping on mobile */
+h1, h2, h3, h4, h5, h6, p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Improved touch targets for accessibility */
+@media (max-width: 640px) {
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Reduce animation distances on mobile for smoother performance */
+  .animate-fade-in-up {
+    --tw-translate-y: 16px;
+  }
+
+  .animate-fade-in-down {
+    --tw-translate-y: -16px;
+  }
+}
+
+/* Very small screens (320px) adjustments */
+@media (max-width: 375px) {
+  .letter-badge {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1rem;
+  }
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+  .px-4 {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
+/* Improve scroll-snap behavior on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
 }

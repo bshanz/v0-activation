@@ -144,14 +144,58 @@ export function ABCCards() {
         {/* Framework flow visualization */}
         <div
           className={cn(
-            "flex justify-center mt-16 transition-all duration-700",
+            "flex justify-center mt-12 sm:mt-16 transition-all duration-700",
             isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
           )}
           style={{ transitionDelay: isVisible ? "500ms" : "0ms" }}
         >
-          <div className="inline-flex items-center gap-4">
+          {/* Mobile: vertical flow */}
+          <div className="sm:hidden flex flex-col items-center gap-3">
+            <div className="flex items-center gap-3">
+              {["A", "B", "C"].map((letter, i) => (
+                <div key={letter} className="flex items-center gap-3">
+                  <div
+                    className={cn(
+                      "w-9 h-9 rounded-lg flex items-center justify-center font-bold text-sm text-white transition-transform hover:scale-110",
+                      i === 0 && "bg-[var(--accent-cyan)]",
+                      i === 1 && "bg-[var(--accent-violet)]",
+                      i === 2 && "bg-[var(--accent-rose)]"
+                    )}
+                  >
+                    {letter}
+                  </div>
+                  {i < 2 && (
+                    <svg width="16" height="2" className="text-[var(--border)]" aria-hidden="true">
+                      <line x1="0" y1="1" x2="16" y2="1" stroke="currentColor" strokeWidth="2" strokeDasharray="4 3" />
+                    </svg>
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="flex items-center gap-2 text-xs text-[var(--text-secondary)]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+              <span className="font-medium">Sustainable Adoption</span>
+            </div>
+          </div>
+
+          {/* Desktop: horizontal flow */}
+          <div className="hidden sm:inline-flex items-center gap-4">
             {["A", "B", "C"].map((letter, i) => (
               <div key={letter} className="flex items-center gap-4">
                 <div
