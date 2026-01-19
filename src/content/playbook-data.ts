@@ -50,7 +50,7 @@ export interface Section {
 export const heroData = {
   title: "v0 Enterprise Adoption Playbook",
   subtitle: "90-Day Sponsor Activation Framework",
-  coreInsight: "Prosci research shows projects with engaged sponsors are 79% likely to meet objectives versus 27% for those without. This playbook makes sponsor activation incredibly easy.",
+  coreInsight: "Prosci research shows projects with engaged sponsors are 79% likely to meet objectives versus 27% without. This playbook makes sponsor activation incredibly easy.",
   statHighlight: {
     primary: "79%",
     secondary: "27%",
