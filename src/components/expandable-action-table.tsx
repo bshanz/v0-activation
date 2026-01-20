@@ -152,7 +152,7 @@ function ExpandableActionRow({
               )}
               aria-label={isCompleted ? "Mark as incomplete" : "Mark as complete"}
             >
-              {isCompleted && <Check className="w-4 h-4" />}
+              <Check className={cn("w-4 h-4", isCompleted ? "text-white" : "text-[var(--border)]")} />
             </button>
           </div>
         </AccordionTrigger>
