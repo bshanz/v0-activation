@@ -12,6 +12,13 @@ export interface TimelineAction {
   outcome: string;
 }
 
+export interface ExpandedTimelineAction extends TimelineAction {
+  id: string;
+  details?: string;
+  tips?: string[];
+  emailTemplateId?: string;
+}
+
 export interface EmailTemplate {
   id: string;
   title: string;
@@ -128,6 +135,334 @@ export const coalitionActions: TimelineAction[] = [
   { week: "Week 7-8", action: "Champion-led problem solving", outcome: "Self-sufficient group" },
   { week: "Week 9-10", action: "Coalition owns onboarding", outcome: "Peer-driven growth" },
   { week: "Week 11-12", action: "Formalize champion program", outcome: "Long-term structure" },
+];
+
+// Expanded timeline actions with detailed content
+export const expandedSponsorActions: ExpandedTimelineAction[] = [
+  {
+    id: "sponsor-week-minus-2",
+    week: "Week -2",
+    action: "Identify 3-5 champion candidates",
+    outcome: "Initial coalition roster",
+    details: "Look for developers who are naturally curious about new tools, respected by peers, and willing to help others. A mix of early adopters and process influencers creates the strongest coalition.",
+    tips: [
+      "Check who's already experimenting with AI tools",
+      "Ask team leads who others go to for technical questions",
+      "Include at least one skeptic—their conversion builds credibility",
+    ],
+    emailTemplateId: "prelaunch-champion",
+  },
+  {
+    id: "sponsor-week-minus-1",
+    week: "Week -1",
+    action: "Send personal launch email",
+    outcome: "Team awareness",
+    details: "A personal email from you carries more weight than a generic announcement. Keep it short, explain the 'why', and set expectations for the first week.",
+    tips: [
+      "Send from your personal email, not a distribution list",
+      "Highlight 2-3 specific use cases relevant to your team",
+      "Name your champions so people know who to ask",
+    ],
+    emailTemplateId: "launch-announcement",
+  },
+  {
+    id: "sponsor-week-1",
+    week: "Week 1",
+    action: "Quick check-in on initial reactions",
+    outcome: "Early pulse check",
+    details: "A brief check-in during the first week shows you're invested and helps surface early blockers before they become ingrained resistance.",
+    tips: [
+      "Ask in 1:1s: 'Have you tried v0 yet? What was that like?'",
+      "Note both enthusiasm and concerns—both are valuable data",
+      "Connect strugglers with champions immediately",
+    ],
+  },
+  {
+    id: "sponsor-week-2",
+    week: "Week 2",
+    action: "Connect blockers with champions",
+    outcome: "Peer support activated",
+    details: "People who are stuck often won't ask for help publicly. Proactively connecting them with champions removes friction and builds peer relationships.",
+    tips: [
+      "Make warm introductions via Slack or email",
+      "Frame it as 'sharing tips' not 'getting help'",
+      "Follow up to ensure the connection happened",
+    ],
+    emailTemplateId: "week2-followup",
+  },
+  {
+    id: "sponsor-week-3",
+    week: "Week 3",
+    action: "Share first success story",
+    outcome: "Visible momentum",
+    details: "Nothing builds momentum like a real example from someone on the team. Find a win and amplify it—even small ones count.",
+    tips: [
+      "Ask champions who's had a good experience",
+      "Get a direct quote from the person",
+      "Include the specific prompt or technique that worked",
+    ],
+    emailTemplateId: "success-spotlight",
+  },
+  {
+    id: "sponsor-week-4",
+    week: "Week 4",
+    action: "Ask \"What's blocking adoption?\"",
+    outcome: "Remove obstacles",
+    details: "By week 4, patterns emerge. Directly asking what's blocking adoption surfaces issues people might not volunteer otherwise.",
+    tips: [
+      "Ask in 1:1s and team settings for different perspectives",
+      "Look for systemic issues vs. individual struggles",
+      "Commit to addressing the top 1-2 blockers",
+    ],
+  },
+  {
+    id: "sponsor-week-5-6",
+    week: "Week 5-6",
+    action: "Feature champion in team meeting",
+    outcome: "Social proof",
+    details: "Public recognition of champions does double duty: it rewards their effort and provides social proof to the broader team.",
+    tips: [
+      "Give the champion 5-10 minutes to share their experience",
+      "Ask them to show a real example, not just talk about it",
+      "Thank them publicly for helping the team",
+    ],
+  },
+  {
+    id: "sponsor-week-7-8",
+    week: "Week 7-8",
+    action: "Review usage data with champions",
+    outcome: "Data-informed pivot",
+    details: "Two months in, you have enough data to see patterns. Review usage together with champions to understand what's working and what needs adjustment.",
+    tips: [
+      "Look at who's using v0 and who isn't—why?",
+      "Identify use cases that are working well vs. not",
+      "Adjust strategy based on what you learn",
+    ],
+    emailTemplateId: "month2-deepdive",
+  },
+  {
+    id: "sponsor-week-9-10",
+    week: "Week 9-10",
+    action: "Plan integration touchpoints",
+    outcome: "Workflow embedding",
+    details: "Moving from 'optional tool' to 'embedded in workflow' is the key to sustainable adoption. Identify where v0 naturally fits and make it the default.",
+    tips: [
+      "Update onboarding docs to include v0",
+      "Add v0 suggestions to sprint planning templates",
+      "Work with champions to identify integration points",
+    ],
+  },
+  {
+    id: "sponsor-week-11-12",
+    week: "Week 11-12",
+    action: "Recognize top contributors",
+    outcome: "Reinforce behavior",
+    details: "End the 90 days by recognizing those who made adoption successful. This reinforces the behavior you want and sets up the next phase.",
+    tips: [
+      "Call out specific contributions in team-wide communication",
+      "Consider small rewards or recognition",
+      "Set expectations for continued champion engagement",
+    ],
+    emailTemplateId: "month3-integration",
+  },
+];
+
+export const expandedChampionActions: ExpandedTimelineAction[] = [
+  {
+    id: "champion-week-minus-2",
+    week: "Week -2",
+    action: "Accept champion role, learn v0",
+    outcome: "Champion ready",
+    details: "Spend 30-60 minutes getting hands-on with v0 before the team launch. You don't need to be an expert—just comfortable enough to help others get started.",
+    tips: [
+      "Try generating 2-3 different types of components",
+      "Note what works well and what's tricky",
+      "Think about which team projects could benefit",
+    ],
+  },
+  {
+    id: "champion-week-minus-1",
+    week: "Week -1",
+    action: "Prepare 1-2 use case demos",
+    outcome: "Demo content ready",
+    details: "Prepare concrete examples using your team's actual design system or common components. Real examples are far more compelling than generic demos.",
+    tips: [
+      "Pick use cases your teammates will recognize",
+      "Practice the demo so it flows smoothly",
+      "Prepare for common questions",
+    ],
+  },
+  {
+    id: "champion-week-1",
+    week: "Week 1",
+    action: "Offer 1:1 help sessions",
+    outcome: "Personal connection",
+    details: "Proactively reach out to teammates offering to help them try v0. 15 minutes of hands-on help is worth more than any documentation.",
+    tips: [
+      "Message 2-3 people directly to offer help",
+      "Let them pick a task they're working on",
+      "Focus on getting them one small win",
+    ],
+  },
+  {
+    id: "champion-week-2",
+    week: "Week 2",
+    action: "Answer questions in Slack/chat",
+    outcome: "Reduce friction",
+    details: "Be visibly available to answer questions. Quick responses to common questions reduce friction and show the team they have support.",
+    tips: [
+      "Watch for v0-related questions in team channels",
+      "Share quick tips when you see people struggling",
+      "Save common Q&As for a future FAQ",
+    ],
+  },
+  {
+    id: "champion-week-3",
+    week: "Week 3",
+    action: "Document a workflow improvement",
+    outcome: "Sharable asset",
+    details: "Capture a specific workflow where v0 helped and document it. This becomes a reusable asset others can follow.",
+    tips: [
+      "Include the prompt you used",
+      "Show before/after time comparison",
+      "Share in a team-accessible location",
+    ],
+  },
+  {
+    id: "champion-week-4",
+    week: "Week 4",
+    action: "Host informal lunch-and-learn",
+    outcome: "Peer teaching",
+    details: "A casual session where people can ask questions and see examples. Keep it informal—the goal is learning, not performance.",
+    tips: [
+      "30 minutes max, keep it casual",
+      "Show real examples from your work",
+      "Leave time for questions and experimentation",
+    ],
+  },
+  {
+    id: "champion-week-5-6",
+    week: "Week 5-6",
+    action: "Pair with hesitant team member",
+    outcome: "Overcome resistance",
+    details: "Identify someone who hasn't engaged and offer to pair with them on a real task. Personal attention often converts skeptics.",
+    tips: [
+      "Ask the sponsor who seems hesitant",
+      "Approach it as collaboration, not conversion",
+      "Let them drive while you guide",
+    ],
+  },
+  {
+    id: "champion-week-7-8",
+    week: "Week 7-8",
+    action: "Gather feedback for sponsor",
+    outcome: "Bottom-up insights",
+    details: "Collect candid feedback from the team about what's working and what isn't. You'll hear things people won't tell the sponsor directly.",
+    tips: [
+      "Have informal 1:1 conversations",
+      "Ask specific questions about blockers",
+      "Synthesize themes for the sponsor",
+    ],
+  },
+  {
+    id: "champion-week-9-10",
+    week: "Week 9-10",
+    action: "Help integrate into team process",
+    outcome: "Sustainable use",
+    details: "Work with the team to identify where v0 should become standard practice. Help update documentation and templates.",
+    tips: [
+      "Suggest v0 for specific types of tasks",
+      "Update team wiki or documentation",
+      "Add v0 to new member onboarding",
+    ],
+  },
+  {
+    id: "champion-week-11-12",
+    week: "Week 11-12",
+    action: "Mentor new champion candidates",
+    outcome: "Scale advocacy",
+    details: "Identify 1-2 people who could become the next generation of champions and start mentoring them to ensure continuity.",
+    tips: [
+      "Look for people who've become enthusiastic users",
+      "Share what you've learned about being a champion",
+      "Introduce them to the sponsor",
+    ],
+  },
+];
+
+export const expandedCoalitionActions: ExpandedTimelineAction[] = [
+  {
+    id: "coalition-week-1-2",
+    week: "Week 1-2",
+    action: "2-3 champions across teams",
+    outcome: "Cross-functional reach",
+    details: "Start with champions from different functional areas to ensure the adoption effort has broad visibility and diverse perspectives.",
+    tips: [
+      "Include frontend, backend, and design if possible",
+      "Champions don't all need to be senior",
+      "Diversity of roles creates broader reach",
+    ],
+  },
+  {
+    id: "coalition-week-3-4",
+    week: "Week 3-4",
+    action: "Weekly champion sync (15 min)",
+    outcome: "Shared learnings",
+    details: "Brief weekly syncs help champions share what's working, troubleshoot issues together, and maintain momentum.",
+    tips: [
+      "Keep it to 15 minutes max",
+      "Start with wins, then challenges",
+      "Rotate facilitation among champions",
+    ],
+  },
+  {
+    id: "coalition-week-5-6",
+    week: "Week 5-6",
+    action: "Expand to 5-8 champions",
+    outcome: "Broader coverage",
+    details: "Based on initial success, recruit additional champions to increase coverage. Look for people who've become enthusiastic organic users.",
+    tips: [
+      "Ask existing champions who they'd recommend",
+      "Target teams or areas with lower adoption",
+      "Quality matters more than quantity",
+    ],
+  },
+  {
+    id: "coalition-week-7-8",
+    week: "Week 7-8",
+    action: "Champion-led problem solving",
+    outcome: "Self-sufficient group",
+    details: "The coalition should start solving adoption challenges independently, with the sponsor as an enabler rather than driver.",
+    tips: [
+      "Let champions propose solutions to blockers",
+      "Sponsor removes obstacles, champions drive adoption",
+      "Celebrate champion-initiated improvements",
+    ],
+  },
+  {
+    id: "coalition-week-9-10",
+    week: "Week 9-10",
+    action: "Coalition owns onboarding",
+    outcome: "Peer-driven growth",
+    details: "Transfer onboarding responsibility to the coalition. New team members should learn about v0 from champions, not just documentation.",
+    tips: [
+      "Add v0 intro to new hire buddy program",
+      "Champions handle questions from new hires",
+      "Keep sponsor informed but hands-off",
+    ],
+  },
+  {
+    id: "coalition-week-11-12",
+    week: "Week 11-12",
+    action: "Formalize champion program",
+    outcome: "Long-term structure",
+    details: "Document the champion role, create rotation or recruitment processes, and establish how the program will continue beyond the initial 90 days.",
+    tips: [
+      "Write down what champions do",
+      "Plan for champion rotation to prevent burnout",
+      "Consider recognition or incentives",
+    ],
+  },
 ];
 
 // Pre-launch role identification

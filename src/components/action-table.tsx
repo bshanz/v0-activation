@@ -160,7 +160,6 @@ export function GenericTable({
       <div className="md:hidden space-y-3">
         {rows.map((row, index) => {
           const values = Object.values(row);
-          const keys = Object.keys(row);
           return (
             <div
               key={index}
