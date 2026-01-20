@@ -126,7 +126,7 @@ export default function Home() {
           />
           <ExpandableActionTable
             title="Coalition Building"
-            description="How the support network grows over time"
+            description="Growing your support network of team leads, managers, and product ops"
             actions={expandedCoalitionActions}
             emailTemplates={emailTemplates}
             storageKey="v0-playbook-coalition-completed"
