@@ -118,18 +118,11 @@ export default function Home() {
       >
         <div className="space-y-8 pt-4">
           <ExpandableActionTable
-            title="Sponsor Actions"
+            title="Executive Sponsor Actions"
             description="Your weekly activities as the executive sponsor"
             actions={expandedSponsorActions}
             emailTemplates={emailTemplates}
             storageKey="v0-playbook-sponsor-completed"
-          />
-          <ExpandableActionTable
-            title="Champion Actions"
-            description="What your technical champions should be doing"
-            actions={expandedChampionActions}
-            emailTemplates={emailTemplates}
-            storageKey="v0-playbook-champion-completed"
           />
           <ExpandableActionTable
             title="Coalition Building"
@@ -137,6 +130,13 @@ export default function Home() {
             actions={expandedCoalitionActions}
             emailTemplates={emailTemplates}
             storageKey="v0-playbook-coalition-completed"
+          />
+          <ExpandableActionTable
+            title="Champion Actions"
+            description="What your technical champions should be doing"
+            actions={expandedChampionActions}
+            emailTemplates={emailTemplates}
+            storageKey="v0-playbook-champion-completed"
           />
         </div>
       </CollapsibleSection>
