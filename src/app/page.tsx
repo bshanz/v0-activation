@@ -2,15 +2,16 @@ import { Hero } from "@/components/hero";
 import { ABCCards } from "@/components/abc-cards";
 import { StickyNav } from "@/components/sticky-nav";
 import { CollapsibleSection } from "@/components/collapsible-section";
-import { ActionTable, GenericTable } from "@/components/action-table";
-import { EmailTemplate, EmailTemplateList } from "@/components/email-template";
+import { GenericTable } from "@/components/action-table";
+import { ExpandableActionTable } from "@/components/expandable-action-table";
+import { EmailTemplateList } from "@/components/email-template";
 import { TalkingPointsList } from "@/components/talking-points";
 import { ScenarioGrid } from "@/components/scenario-card";
 import { PushbackList } from "@/components/pushback-card";
 import {
-  sponsorActions,
-  championActions,
-  coalitionActions,
+  expandedSponsorActions,
+  expandedChampionActions,
+  expandedCoalitionActions,
   roleIdentification,
   emailTemplates,
   talkingPoints,
@@ -112,24 +113,30 @@ export default function Home() {
       <CollapsibleSection
         id="timeline"
         title="Quick Reference Timeline"
-        subtitle="90-day action breakdown by role"
+        subtitle="90-day action breakdown by role — click any week to expand"
         defaultOpen
       >
         <div className="space-y-8 pt-4">
-          <ActionTable
-            title="Sponsor Actions"
+          <ExpandableActionTable
+            title="Executive Sponsor Actions"
             description="Your weekly activities as the executive sponsor"
-            actions={sponsorActions}
+            actions={expandedSponsorActions}
+            emailTemplates={emailTemplates}
+            storageKey="v0-playbook-sponsor-completed"
           />
-          <ActionTable
+          <ExpandableActionTable
+            title="Coalition Building"
+            description="Growing your support network of team leads, managers, and product ops"
+            actions={expandedCoalitionActions}
+            emailTemplates={emailTemplates}
+            storageKey="v0-playbook-coalition-completed"
+          />
+          <ExpandableActionTable
             title="Champion Actions"
             description="What your technical champions should be doing"
-            actions={championActions}
-          />
-          <ActionTable
-            title="Coalition Building"
-            description="How the support network grows over time"
-            actions={coalitionActions}
+            actions={expandedChampionActions}
+            emailTemplates={emailTemplates}
+            storageKey="v0-playbook-champion-completed"
           />
         </div>
       </CollapsibleSection>
