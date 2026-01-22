@@ -7,7 +7,7 @@ import { X, Check, RefreshCw } from "lucide-react";
 const doesntWorkItems = [
   "Assigning seats and hoping for the best",
   "One-time training sessions",
-  "Expecting organic adoption",
+  "Relying on organic adoption alone",
 ];
 
 const worksItems = [
