@@ -1,5 +1,6 @@
 import { Hero } from "@/components/hero";
 import { ABCCards } from "@/components/abc-cards";
+import { WhatWorksComparison } from "@/components/what-works-comparison";
 import { StickyNav } from "@/components/sticky-nav";
 import { CollapsibleSection } from "@/components/collapsible-section";
 import { GenericTable } from "@/components/action-table";
@@ -48,6 +49,9 @@ export default function Home() {
 
       {/* ABC Framework Section */}
       <ABCCards />
+
+      {/* What Works vs What Doesn't */}
+      <WhatWorksComparison />
 
       {/* Adoption Success Factors */}
       <CollapsibleSection
