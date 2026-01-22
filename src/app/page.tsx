@@ -50,9 +50,6 @@ export default function Home() {
       {/* ABC Framework Section */}
       <ABCCards />
 
-      {/* What Works vs What Doesn't */}
-      <WhatWorksComparison />
-
       {/* Adoption Success Factors */}
       <CollapsibleSection
         id="success-factors"
@@ -112,6 +109,9 @@ export default function Home() {
           </div>
         </div>
       </CollapsibleSection>
+
+      {/* What Works vs What Doesn't */}
+      <WhatWorksComparison />
 
       {/* Quick Reference Timeline */}
       <CollapsibleSection
