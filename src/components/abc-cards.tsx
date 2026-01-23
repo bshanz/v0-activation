@@ -147,7 +147,7 @@ export function ABCCards() {
           )}
           style={{ transitionDelay: isVisible ? "500ms" : "0ms" }}
         >
-          {/* A + B + C = Sustainable Adoption */}
+          {/* A + B + C badges row */}
           <div className="flex items-center gap-2 sm:gap-3">
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center font-bold text-sm text-white bg-[var(--accent-cyan)] transition-transform hover:scale-110">
               A
@@ -160,8 +160,12 @@ export function ABCCards() {
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center font-bold text-sm text-white bg-[var(--accent-rose)] transition-transform hover:scale-110">
               C
             </div>
-            <span className="text-[var(--text-muted)] font-medium text-lg">=</span>
-            <span className="font-medium text-sm sm:text-base text-[var(--text-secondary)]">Sustainable Adoption</span>
+          </div>
+
+          {/* = Sustainable Adoption - below and centered */}
+          <div className="flex items-center gap-2 mt-4 text-sm sm:text-base text-[var(--text-secondary)]">
+            <span className="text-[var(--text-muted)] font-medium">=</span>
+            <span className="font-medium">Sustainable Adoption</span>
           </div>
         </div>
       </div>

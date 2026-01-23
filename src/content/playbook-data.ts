@@ -82,7 +82,7 @@ export const abcCards: ABCCard[] = [
   {
     letter: "C",
     title: "Core Workflow Integration",
-    description: "v0 plugged into design systems, repos, and sprint rituals. Not a side tool—embedded in how work actually gets done.",
+    description: "v0 plugged into design systems, repos, and sprint rituals. Not a side tool; embedded in how work actually gets done.",
     icon: "⚙️",
   },
 ];
