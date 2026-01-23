@@ -79,8 +79,7 @@ export function ABCCards() {
             The ABC Framework
           </h2>
           <p className="text-[#666666] max-w-2xl mx-auto text-lg">
-            A proven three-phase approach to driving sustainable technology
-            adoption in your organization.
+            Three parallel pillars that run simultaneously from Day 1—not sequential phases.
           </p>
         </div>
 
@@ -108,14 +107,11 @@ export function ABCCards() {
                   cardColors[index].glow
                 )}
               >
-                {/* Letter badge and phase indicator */}
-                <div className="flex items-center justify-between mb-6">
+                {/* Letter badge */}
+                <div className="mb-6">
                   <div className={cn("letter-badge", cardColors[index].badge)}>
                     {card.letter}
                   </div>
-                  <span className="text-xs text-[var(--text-muted)] uppercase tracking-wider font-medium">
-                    Phase {index + 1}
-                  </span>
                 </div>
 
                 {/* Title */}
@@ -141,7 +137,7 @@ export function ABCCards() {
           ))}
         </div>
 
-        {/* Framework flow visualization - centered below cards */}
+        {/* Framework equation - centered below cards */}
         <div
           className={cn(
             "flex flex-col items-center mt-12 sm:mt-16 transition-all duration-700",
@@ -151,48 +147,21 @@ export function ABCCards() {
           )}
           style={{ transitionDelay: isVisible ? "500ms" : "0ms" }}
         >
-          {/* A-B-C badges row */}
-          <div className="flex items-center gap-3 sm:gap-4">
-            {["A", "B", "C"].map((letter, i) => (
-              <div key={letter} className="flex items-center gap-3 sm:gap-4">
-                <div
-                  className={cn(
-                    "w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center font-bold text-sm text-white transition-transform hover:scale-110",
-                    i === 0 && "bg-[var(--accent-cyan)]",
-                    i === 1 && "bg-[var(--accent-violet)]",
-                    i === 2 && "bg-[var(--accent-rose)]"
-                  )}
-                >
-                  {letter}
-                </div>
-                {i < 2 && (
-                  <svg width="24" height="2" className="text-[var(--border)] sm:w-8" aria-hidden="true">
-                    <line x1="0" y1="1" x2="32" y2="1" stroke="currentColor" strokeWidth="2" strokeDasharray="5 4" />
-                  </svg>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Sustainable Adoption - below and centered */}
-          <div className="flex items-center gap-2 mt-4 text-xs sm:text-sm text-[var(--text-secondary)]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="sm:w-4 sm:h-4"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
-            <span className="font-medium">Sustainable Adoption</span>
+          {/* A + B + C = Sustainable Adoption */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center font-bold text-sm text-white bg-[var(--accent-cyan)] transition-transform hover:scale-110">
+              A
+            </div>
+            <span className="text-[var(--text-muted)] font-medium text-lg">+</span>
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center font-bold text-sm text-white bg-[var(--accent-violet)] transition-transform hover:scale-110">
+              B
+            </div>
+            <span className="text-[var(--text-muted)] font-medium text-lg">+</span>
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center font-bold text-sm text-white bg-[var(--accent-rose)] transition-transform hover:scale-110">
+              C
+            </div>
+            <span className="text-[var(--text-muted)] font-medium text-lg">=</span>
+            <span className="font-medium text-sm sm:text-base text-[var(--text-secondary)]">Sustainable Adoption</span>
           </div>
         </div>
       </div>
