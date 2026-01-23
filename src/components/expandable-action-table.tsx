@@ -145,7 +145,7 @@ function ExpandableActionRow({
                 onToggleCompleted();
               }}
               className={cn(
-                "w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all",
+                "w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all cursor-pointer",
                 isCompleted
                   ? "bg-[var(--accent-cyan)] border-[var(--accent-cyan)] text-white"
                   : "border-[var(--border)] hover:border-[var(--accent-cyan)]"
@@ -196,7 +196,7 @@ function ExpandableActionRow({
                   onToggleCompleted();
                 }}
                 className={cn(
-                  "w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all",
+                  "w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all cursor-pointer",
                   isCompleted
                     ? "bg-[var(--accent-cyan)] border-[var(--accent-cyan)] text-white"
                     : "border-[var(--border)] hover:border-[var(--accent-cyan)]"

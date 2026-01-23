@@ -70,19 +70,19 @@ export const abcCards: ABCCard[] = [
   {
     letter: "A",
     title: "Executive Sponsorship & Alignment",
-    description: "Articulates the \"why\" and ties it to clear goals and business outcomes. Execs reinforce usage, ask for progress, and celebrate wins.",
+    description: "Execs stay visibly engaged, communicate why this matters, ask about progress, and celebrate wins. Air cover that signals \"this isn't optional.\"",
     icon: "🎯",
   },
   {
     letter: "B",
     title: "Builder Engagement & Champions",
-    description: "Identified champions running workshops and hackathons. Re-enablement sessions to keep energy up. Internal storytelling and promotion of wins.",
+    description: "Identified champions run workshops, share wins internally, and keep energy up. Peer-to-peer momentum that pulls people in.",
     icon: "🏗️",
   },
   {
     letter: "C",
     title: "Core Workflow Integration",
-    description: "v0 plugged into design systems, repos, and sprints. Not a side tool, but embedded in day-to-day workflows.",
+    description: "v0 plugged into design systems, repos, and sprint rituals. Not a side tool; embedded in how work actually gets done.",
     icon: "⚙️",
   },
 ];
