@@ -144,7 +144,7 @@ export const expandedSponsorActions: ExpandedTimelineAction[] = [
     week: "Week -2",
     action: "Identify 3-5 champion candidates",
     outcome: "Initial coalition roster",
-    details: "Look for developers who are naturally curious about new tools, respected by peers, and willing to help others. A mix of early adopters and process influencers creates the strongest coalition.",
+    details: "Look for users who are naturally curious about new tools, respected by peers, and willing to help others. A mix of early adopters and process influencers creates the strongest coalition.",
     tips: [
       "Check who's already experimenting with AI tools",
       "Ask team leads who others go to for technical questions",
@@ -759,7 +759,7 @@ export const pushbackItems: PushbackItem[] = [
   {
     id: "my-job",
     objection: "If AI can do my job, what happens to me?",
-    response: "I hear that concern. Here's how I see it: v0 handles the tedious parts, which means you get to focus on the work that actually needs human judgment—architecture decisions, user experience, solving novel problems. The developers who'll thrive are the ones who can leverage these tools, not compete with them.",
+    response: "I hear that concern. Here's how I see it: v0 handles the tedious parts, which means you get to focus on the work that actually needs human judgment—architecture decisions, user experience, solving novel problems. The users who'll thrive are the ones who can leverage these tools, not compete with them.",
   },
   {
     id: "another-tool",
@@ -774,7 +774,7 @@ export const pushbackItems: PushbackItem[] = [
   {
     id: "not-my-style",
     objection: "I prefer to write code myself—it's how I learn.",
-    response: "That's a legitimate approach. What if you thought of v0 as a learning tool too? Generate something, then study how it approached the problem. Some developers find it shows them patterns they hadn't considered. It's another input, not a replacement for your learning.",
+    response: "That's a legitimate approach. What if you thought of v0 as a learning tool too? Generate something, then study how it approached the problem. Some users find it shows them patterns they hadn't considered. It's another input, not a replacement for your learning.",
   },
 ];
 
