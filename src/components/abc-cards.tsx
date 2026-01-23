@@ -149,15 +149,15 @@ export function ABCCards() {
         >
           {/* A + B + C badges row */}
           <div className="flex items-center gap-2 sm:gap-3">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center font-bold text-sm text-white bg-[var(--accent-cyan)] transition-transform hover:scale-110">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center font-bold text-sm text-white bg-[var(--accent-cyan)] transition-transform hover:scale-110 cursor-pointer">
               A
             </div>
             <span className="text-[var(--text-muted)] font-medium text-lg">+</span>
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center font-bold text-sm text-white bg-[var(--accent-violet)] transition-transform hover:scale-110">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center font-bold text-sm text-white bg-[var(--accent-violet)] transition-transform hover:scale-110 cursor-pointer">
               B
             </div>
             <span className="text-[var(--text-muted)] font-medium text-lg">+</span>
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center font-bold text-sm text-white bg-[var(--accent-rose)] transition-transform hover:scale-110">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center font-bold text-sm text-white bg-[var(--accent-rose)] transition-transform hover:scale-110 cursor-pointer">
               C
             </div>
           </div>
