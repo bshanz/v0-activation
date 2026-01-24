@@ -79,7 +79,7 @@ export function ABCCards() {
             The ABC Framework
           </h2>
           <p className="text-[#666666] max-w-2xl mx-auto text-lg">
-            Three parallel pillars that run simultaneously from Day 1, driving sustainable adoption.
+            Three key pillars that run from Day 1, driving sustainable adoption.
           </p>
         </div>
 
