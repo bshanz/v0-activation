@@ -75,14 +75,14 @@ export const frameworkCards: FrameworkCard[] = [
   },
   {
     percentage: "20%",
-    title: "Process & Training",
-    description: "Workshops, documentation, prompt libraries, and workflow design. The how-to layer that connects the tool to daily work. Necessary, but still not where adoption is won or lost.",
+    title: "Training & Enablement",
+    description: "Workshops, documentation, prompt libraries, and office hours. The how-to-use-it layer that builds confidence and competence across teams. Necessary, but still not where adoption is won or lost.",
     icon: "📐",
   },
   {
     percentage: "70%",
     title: "Change Management",
-    description: "The people side — visible executive sponsorship, champion networks, coalition building, celebrating wins, addressing resistance. This is where adoption lives or dies, and exactly what this playbook systematizes.",
+    description: "The people side — visible executive sponsorship, champion networks, coalition building, workflow integration that makes v0 part of how work gets done, celebrating wins, and addressing resistance. This is where adoption lives or dies, and exactly what this playbook systematizes.",
     icon: "🎯",
   },
 ];
