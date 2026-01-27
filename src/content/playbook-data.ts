@@ -1,6 +1,6 @@
 // Types for playbook content
-export interface ABCCard {
-  letter: string;
+export interface FrameworkCard {
+  percentage: string;
   title: string;
   description: string;
   icon: string;
@@ -56,7 +56,7 @@ export interface Section {
 // Hero section data
 export const heroData = {
   title: "v0 Enterprise Adoption Playbook",
-  subtitle: "90-Day Sponsor Activation Framework",
+  subtitle: "The 10-20-70 Sponsor Activation Framework",
   coreInsight: "Prosci research shows projects with engaged executive sponsors are 79% likely to meet objectives versus 27% without. This playbook makes sponsor activation incredibly easy.",
   statHighlight: {
     primary: "79%",
@@ -65,32 +65,32 @@ export const heroData = {
   },
 };
 
-// ABC Framework cards
-export const abcCards: ABCCard[] = [
+// 10-20-70 Framework cards
+export const frameworkCards: FrameworkCard[] = [
   {
-    letter: "A",
-    title: "Executive Sponsorship & Alignment",
-    description: "Execs stay visibly engaged, communicate why this matters, ask about progress, and celebrate wins. Air cover that signals \"this isn't optional.\"",
-    icon: "🎯",
-  },
-  {
-    letter: "B",
-    title: "Builder Engagement & Champions",
-    description: "Identified champions run workshops, share wins internally, and keep energy up. Peer-to-peer momentum that pulls people in.",
-    icon: "🏗️",
-  },
-  {
-    letter: "C",
-    title: "Core Workflow Integration",
-    description: "v0 plugged into design systems, repos, and sprint rituals. Not a side tool; embedded in how work actually gets done.",
+    percentage: "10%",
+    title: "Technology",
+    description: "The product itself — access, integrations, and platform capabilities. Essential but insufficient. Most organizations over-invest here and wonder why adoption stalls.",
     icon: "⚙️",
+  },
+  {
+    percentage: "20%",
+    title: "Process & Training",
+    description: "Workshops, documentation, prompt libraries, and workflow design. The how-to layer that connects the tool to daily work. Necessary, but still not where adoption is won or lost.",
+    icon: "📐",
+  },
+  {
+    percentage: "70%",
+    title: "Change Management",
+    description: "The people side — visible executive sponsorship, champion networks, coalition building, celebrating wins, addressing resistance. This is where adoption lives or dies, and exactly what this playbook systematizes.",
+    icon: "🎯",
   },
 ];
 
 // Navigation sections
 export const sections: Section[] = [
   { id: "hero", title: "Overview" },
-  { id: "abc", title: "ABC Framework" },
+  { id: "framework", title: "10-20-70" },
   { id: "success-factors", title: "Success Factors" },
   { id: "timeline", title: "Quick Reference" },
   { id: "prelaunch", title: "Pre-Launch" },
