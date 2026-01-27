@@ -47,7 +47,7 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
 
-      {/* ABC Framework Section */}
+      {/* 10-20-70 Framework Section */}
       <ABCCards />
 
       {/* What Works vs What Doesn't */}

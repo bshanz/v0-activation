@@ -188,7 +188,7 @@ export function Hero() {
             </svg>
           </a>
           <a
-            href="#abc"
+            href="#framework"
             className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-[#EAEAEA] text-black font-medium rounded-lg hover:border-black transition-colors duration-150 touch-action-manipulation"
           >
             Learn the Framework

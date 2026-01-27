@@ -24,9 +24,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "v0 Enterprise Adoption Playbook | 90-Day Sponsor Activation Framework",
+  title: "v0 Enterprise Adoption Playbook | 10-20-70 Sponsor Activation Framework",
   description:
-    "A comprehensive guide for enterprise sponsors to drive v0 adoption using the ABC Framework. Transform your organization's development workflow with AI-powered code generation.",
+    "A comprehensive guide for enterprise sponsors to drive v0 adoption using the 10-20-70 Framework. 10% technology, 20% process and training, 70% change management — systematizing the people side of adoption.",
   keywords: [
     "v0",
     "enterprise",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "v0 Enterprise Adoption Playbook",
     description:
-      "90-Day Sponsor Activation Framework for Enterprise v0 Adoption",
+      "10-20-70 Sponsor Activation Framework for Enterprise v0 Adoption",
     type: "website",
   },
 };
