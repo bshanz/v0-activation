@@ -103,7 +103,7 @@ export const sections: Section[] = [
 
 // Timeline actions
 export const sponsorActions: TimelineAction[] = [
-  { week: "Week -2", action: "Identify 3-5 champion candidates", outcome: "Initial coalition roster" },
+  { week: "Week -2", action: "Align coalition & champions on rollout plan", outcome: "Shared strategy & success metrics" },
   { week: "Week -1", action: "Send personal launch email", outcome: "Team awareness" },
   { week: "Week 1", action: "Quick check-in on initial reactions", outcome: "Early pulse check" },
   { week: "Week 2", action: "Connect blockers with champions", outcome: "Peer support activated" },
@@ -142,13 +142,14 @@ export const expandedSponsorActions: ExpandedTimelineAction[] = [
   {
     id: "sponsor-week-minus-2",
     week: "Week -2",
-    action: "Identify 3-5 champion candidates",
-    outcome: "Initial coalition roster",
-    details: "Look for users who are naturally curious about new tools, respected by peers, and willing to help others. A mix of early adopters and process influencers creates the strongest coalition.",
+    action: "Align coalition & champions on rollout plan",
+    outcome: "Shared strategy & success metrics",
+    details: "Meet with your coalition (team leads, product ops, engineering managers) and any identified champions to align on rollout strategy, timeline, success metrics, and KPIs. This ensures everyone is working from the same playbook and sets clear expectations for what success looks like.",
     tips: [
-      "Check who's already experimenting with AI tools",
-      "Ask team leads who others go to for technical questions",
-      "Include at least one skeptic—their conversion builds credibility",
+      "Define 2-3 measurable KPIs (e.g., active users, time saved, projects completed)",
+      "Agree on rollout timeline and key milestones with team leads",
+      "Clarify roles: who owns communication, training, and support",
+      "If champions are identified, get their input on realistic adoption targets",
     ],
     emailTemplateId: "prelaunch-champion",
   },
