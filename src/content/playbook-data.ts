@@ -82,7 +82,7 @@ export const frameworkCards: FrameworkCard[] = [
   {
     percentage: "70%",
     title: "Change Management",
-    description: "The people side — visible executive sponsorship, champion networks, coalition building, workflow integration that makes v0 part of how work gets done, celebrating wins, and addressing resistance. This is where adoption lives or dies, and exactly what this playbook systematizes.",
+    description: "The people side — visible executive sponsorship, champion networks, coalition building, workflow integration, celebrating wins, and addressing resistance. This is where adoption lives or dies, and exactly what this playbook systematizes.",
     icon: "🎯",
   },
 ];
