@@ -103,7 +103,7 @@ export const sections: Section[] = [
 
 // Timeline actions
 export const sponsorActions: TimelineAction[] = [
-  { week: "Week -2", action: "Align coalition & champions on rollout plan", outcome: "Shared strategy & success metrics" },
+  { week: "Week -2", action: "Align coalition & champions on rollout plan", outcome: "Rollout strategy & success" },
   { week: "Week -1", action: "Send personal launch email", outcome: "Team awareness" },
   { week: "Week 1", action: "Quick check-in on initial reactions", outcome: "Early pulse check" },
   { week: "Week 2", action: "Connect blockers with champions", outcome: "Peer support activated" },
@@ -143,7 +143,7 @@ export const expandedSponsorActions: ExpandedTimelineAction[] = [
     id: "sponsor-week-minus-2",
     week: "Week -2",
     action: "Align coalition & champions on rollout plan",
-    outcome: "Shared strategy & success metrics",
+    outcome: "Rollout strategy & success",
     details: "Meet with your coalition (team leads, product ops, engineering managers) and any identified champions to align on rollout strategy, timeline, success metrics, and KPIs. This ensures everyone is working from the same playbook and sets clear expectations for what success looks like.",
     tips: [
       "Define 2-3 measurable KPIs (e.g., active users, time saved, projects completed)",
