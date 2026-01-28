@@ -170,7 +170,7 @@ export function ABCCards() {
 
           {/* Explanatory note */}
           <p className="mt-6 text-sm text-[var(--text-muted)] max-w-xl text-center leading-relaxed">
-            Organizations over-invest in the tool and under-invest in actually getting people to use it differently. This playbook systematizes the 70% — making the change management piece prescriptive and actionable.
+            Organizations over-invest in the tool and under-invest in actually getting people to use it. This playbook systematizes the 70% — making the change management piece prescriptive and actionable.
           </p>
         </div>
       </div>
