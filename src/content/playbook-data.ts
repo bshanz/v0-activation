@@ -505,7 +505,7 @@ export const emailTemplates: EmailTemplate[] = [
     id: "prelaunch-champion",
     title: "Pre-Launch: Coalition & Champion Alignment",
     from: "sponsor",
-    audience: "coalition",
+    audience: "team",
     subject: "v0 Rollout: Aligning on Strategy & Success Metrics",
     body: `Hi team,
 
