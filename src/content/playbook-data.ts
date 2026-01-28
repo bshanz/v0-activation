@@ -503,24 +503,30 @@ export const roleIdentification = {
 export const emailTemplates: EmailTemplate[] = [
   {
     id: "prelaunch-champion",
-    title: "Pre-Launch: Champion Invitation",
+    title: "Pre-Launch: Coalition & Champion Alignment",
     from: "sponsor",
-    audience: "champion",
-    subject: "Help me bring v0 to [Team Name]",
-    body: `Hi [Name],
+    audience: "coalition",
+    subject: "v0 Rollout: Aligning on Strategy & Success Metrics",
+    body: `Hi team,
 
-I'm bringing v0 to our team and I'd like your help making it successful.
+I'm scheduling a brief alignment session for our v0 rollout and want to make sure we're all on the same page before launch.
 
-I've noticed you're someone others look to for technical guidance, and I think you'd be great at helping teammates discover how v0 can accelerate their work.
+Attendees: Team leads, product ops, and any identified champions
 
-Would you be willing to:
-- Spend 30 mins getting familiar with v0 before the team launch
-- Be a go-to person for questions during the first few weeks
-- Share what's working (or not) so we can improve the rollout
+Agenda:
+- Rollout strategy and phased timeline
+- Success metrics and KPIs (e.g., active users, time saved, projects shipped)
+- Role clarity: who owns communication, training, and support
+- Realistic adoption targets and key milestones
 
-This isn't a formal role—just asking you to be a helpful voice when questions come up.
+Please come prepared with:
+- Any concerns or blockers you foresee for your team
+- Input on what "success" looks like from your perspective
+- Ideas for metrics that would be meaningful to track
 
-Coffee on me if you're interested?
+I want this rollout to be a collaborative effort, not a top-down mandate. Your input will directly shape how we measure and communicate progress.
+
+[Meeting link/time or "Let me know your availability this week"]
 
 [Your name]`,
   },
