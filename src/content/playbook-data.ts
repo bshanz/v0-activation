@@ -103,9 +103,9 @@ export const sections: Section[] = [
 
 // Timeline actions
 export const sponsorActions: TimelineAction[] = [
-  { week: "Week -2", action: "Identify 3-5 champion candidates", outcome: "Initial coalition roster" },
-  { week: "Week -1", action: "Send personal launch email", outcome: "Team awareness" },
-  { week: "Week 1", action: "Quick check-in on initial reactions", outcome: "Early pulse check" },
+  { week: "Week -2", action: "Align coalition on rollout plan", outcome: "Shared rollout plan" },
+  { week: "Week 0", action: "Send personal launch email", outcome: "Team awareness" },
+  { week: "Week 1", action: "Share something you built with v0", outcome: "Lead by example" },
   { week: "Week 2", action: "Connect blockers with champions", outcome: "Peer support activated" },
   { week: "Week 3", action: "Share first success story", outcome: "Visible momentum" },
   { week: "Week 4", action: "Ask \"What's blocking adoption?\"", outcome: "Remove obstacles" },
@@ -142,19 +142,18 @@ export const expandedSponsorActions: ExpandedTimelineAction[] = [
   {
     id: "sponsor-week-minus-2",
     week: "Week -2",
-    action: "Identify 3-5 champion candidates",
-    outcome: "Initial coalition roster",
-    details: "Look for users who are naturally curious about new tools, respected by peers, and willing to help others. A mix of early adopters and process influencers creates the strongest coalition.",
+    action: "Align coalition on rollout plan",
+    outcome: "Shared rollout plan",
+    details: "Meet with your coalition (team leads, managers, product ops) and identified champions to align on the rollout approach. Define what success looks like, agree on the timeline, and ensure everyone understands their role in driving adoption.",
     tips: [
-      "Check who's already experimenting with AI tools",
-      "Ask team leads who others go to for technical questions",
-      "Include at least one skeptic—their conversion builds credibility",
+      "Agree on 2-3 measurable KPIs (e.g., % of team trying v0 by week 2, time saved on prototyping)",
+      "Walk through the 90-day timeline so everyone knows what's coming",
+      "Clarify who's responsible for what—sponsor visibility, champion peer support, coalition reinforcement",
     ],
-    emailTemplateId: "prelaunch-champion",
   },
   {
-    id: "sponsor-week-minus-1",
-    week: "Week -1",
+    id: "sponsor-week-0",
+    week: "Week 0",
     action: "Send personal launch email",
     outcome: "Team awareness",
     details: "A personal email from you carries more weight than a generic announcement. Keep it short, explain the 'why', and set expectations for the first week.",
@@ -168,13 +167,13 @@ export const expandedSponsorActions: ExpandedTimelineAction[] = [
   {
     id: "sponsor-week-1",
     week: "Week 1",
-    action: "Quick check-in on initial reactions",
-    outcome: "Early pulse check",
-    details: "A brief check-in during the first week shows you're invested and helps surface early blockers before they become ingrained resistance.",
+    action: "Share something you built with v0",
+    outcome: "Lead by example",
+    details: "Post something you built with v0 in Slack or Teams. Keep it casual—this isn't a polished demo, just you showing that you're using the tool too. Invite others to share what they've built.",
     tips: [
-      "Ask in 1:1s: 'Have you tried v0 yet? What was that like?'",
-      "Note both enthusiasm and concerns—both are valuable data",
-      "Connect strugglers with champions immediately",
+      "Build something simple but real—a dashboard mockup, an internal tool idea, anything",
+      "Post with a note like 'Tried v0 this week—here's what I made. What are you all building?'",
+      "React to and celebrate what others share to keep momentum going",
     ],
   },
   {
@@ -502,30 +501,37 @@ export const roleIdentification = {
 export const emailTemplates: EmailTemplate[] = [
   {
     id: "prelaunch-champion",
-    title: "Pre-Launch: Champion Invitation",
+    title: "Pre-Launch: Rollout Kickoff Alignment",
     from: "sponsor",
     audience: "champion",
-    subject: "Help me bring v0 to [Team Name]",
+    subject: "v0 rollout kickoff — aligning on our plan",
     body: `Hi [Name],
 
-I'm bringing v0 to our team and I'd like your help making it successful.
+I wanted to share our v0 rollout plan and make sure we're aligned before launch.
 
-I've noticed you're someone others look to for technical guidance, and I think you'd be great at helping teammates discover how v0 can accelerate their work.
+**Our timeline:**
+- Week -1: Launch announcement and initial access
+- Weeks 1-4: Build awareness, gather early wins
+- Weeks 5-8: Deepen engagement, address blockers
+- Weeks 9-12: Embed into workflows, recognize contributors
 
-Would you be willing to:
-- Spend 30 mins getting familiar with v0 before the team launch
-- Be a go-to person for questions during the first few weeks
-- Share what's working (or not) so we can improve the rollout
+**Success metrics we're targeting:**
+- [X]% of team has tried v0 by end of week 2
+- [X] documented workflow improvements by end of month 1
+- [Qualitative goal, e.g., "v0 becomes default for prototyping tasks"]
 
-This isn't a formal role—just asking you to be a helpful voice when questions come up.
+**What I need from you:**
+- Be visible and available for questions in the first few weeks
+- Share wins and tips as you discover them
+- Flag blockers early so we can address them
 
-Coffee on me if you're interested?
+Let's connect briefly before launch to walk through any questions. Does [time] work?
 
 [Your name]`,
   },
   {
     id: "launch-announcement",
-    title: "Week 1: Launch Announcement",
+    title: "Week 0: Launch Announcement",
     from: "sponsor",
     audience: "team",
     subject: "v0 is now available for [Team Name]",
@@ -534,15 +540,15 @@ Coffee on me if you're interested?
 I'm excited to share that v0 is now available for our team.
 
 **What is v0?**
-v0 is an AI-powered code generation tool that helps you build UI components faster. Think of it as a coding collaborator that can generate React components, handle boilerplate, and accelerate prototyping.
+v0 is an AI coding agent that speeds up product development by turning ideas into working apps. Anyone can use it to prototype, build internal tools, or ship production code — no technical skill required.
 
 **Why this matters for us:**
-- Faster prototyping for client demos
-- Less time on repetitive UI code
-- More time for complex problem-solving
+- Ship ideas without waiting on eng sprints
+- Test concepts before committing dev resources
+- Unblock yourself when you need a quick tool
 
 **Getting started:**
-1. Access v0 at [URL]
+1. Access v0 at https://v0.app
 2. Try generating a simple component
 3. Questions? Reach out to [Champion names] or me
 
