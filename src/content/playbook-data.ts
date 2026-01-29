@@ -103,25 +103,24 @@ export const sections: Section[] = [
 
 // Timeline actions
 export const sponsorActions: TimelineAction[] = [
-  { week: "Week -2", action: "Align coalition on rollout plan", outcome: "Shared rollout plan" },
+  { week: "Week -2", action: "Align coalition on rollout plan", outcome: "Rollout timeline" },
   { week: "Week 0", action: "Send personal launch email", outcome: "Team awareness" },
   { week: "Week 1", action: "Share something you built with v0", outcome: "Lead by example" },
-  { week: "Week 2", action: "Connect blockers with champions", outcome: "Peer support activated" },
   { week: "Week 3", action: "Share first success story", outcome: "Visible momentum" },
-  { week: "Week 4", action: "Ask \"What's blocking adoption?\"", outcome: "Remove obstacles" },
-  { week: "Week 5-6", action: "Feature champion in team meeting", outcome: "Social proof" },
-  { week: "Week 7-8", action: "Review usage data with champions", outcome: "Data-informed pivot" },
-  { week: "Week 9-10", action: "Plan integration touchpoints", outcome: "Workflow embedding" },
-  { week: "Week 11-12", action: "Recognize top contributors", outcome: "Reinforce behavior" },
+  { week: "Week 4", action: "Check in with coalition on progress", outcome: "Rollout pulse check" },
+  { week: "Week 6", action: "Amplify a win publicly", outcome: "Sustained visibility" },
+  { week: "Week 8", action: "Review usage with Vercel exec", outcome: "External accountability" },
+  { week: "Week 10", action: "Recognize top contributors", outcome: "Reinforce behavior" },
+  { week: "Week 12", action: "Plan for what's next", outcome: "Sustained momentum" },
 ];
 
 export const championActions: TimelineAction[] = [
-  { week: "Week -2", action: "Accept champion role, learn v0", outcome: "Champion ready" },
+  { week: "Week -2", action: "Align on rollout plan and champion role", outcome: "Clear expectations" },
   { week: "Week -1", action: "Prepare 1-2 use case demos", outcome: "Demo content ready" },
   { week: "Week 1", action: "Offer 1:1 help sessions", outcome: "Personal connection" },
   { week: "Week 2", action: "Answer questions in Slack/chat", outcome: "Reduce friction" },
   { week: "Week 3", action: "Document a workflow improvement", outcome: "Sharable asset" },
-  { week: "Week 4", action: "Host informal lunch-and-learn", outcome: "Peer teaching" },
+  { week: "Week 4", action: "Check in with sponsor on progress", outcome: "Aligned on status" },
   { week: "Week 5-6", action: "Pair with hesitant team member", outcome: "Overcome resistance" },
   { week: "Week 7-8", action: "Gather feedback for sponsor", outcome: "Bottom-up insights" },
   { week: "Week 9-10", action: "Help integrate into team process", outcome: "Sustainable use" },
@@ -129,11 +128,18 @@ export const championActions: TimelineAction[] = [
 ];
 
 export const coalitionActions: TimelineAction[] = [
-  { week: "Week 1-2", action: "2-3 champions across teams", outcome: "Cross-functional reach" },
-  { week: "Week 3-4", action: "Weekly champion sync (15 min)", outcome: "Shared learnings" },
-  { week: "Week 5-6", action: "Expand to 5-8 champions", outcome: "Broader coverage" },
-  { week: "Week 7-8", action: "Champion-led problem solving", outcome: "Self-sufficient group" },
+  { week: "Week -2", action: "Align on rollout plan and support approach", outcome: "Reinforcement structure" },
+  { week: "Week -1", action: "Map workflows, use cases, and setup", outcome: "Integration blueprint" },
+  { week: "Week 0", action: "Roll out access to team", outcome: "Access and awareness" },
+  { week: "Week 1", action: "Host v0 training or hackathon", outcome: "Team can build" },
+  { week: "Week 2", action: "Champion-led office hours", outcome: "Questions answered" },
+  { week: "Week 3", action: "Building showcase", outcome: "Visible momentum" },
+  { week: "Week 4", action: "Check in with sponsor on progress", outcome: "Aligned on status" },
+  { week: "Week 5", action: "Send adoption survey", outcome: "Structured feedback" },
+  { week: "Week 6", action: "Advanced use cases training", outcome: "Deeper skills" },
+  { week: "Week 7", action: "Prep for Vercel exec review", outcome: "Ready for review" },
   { week: "Week 9-10", action: "Coalition owns onboarding", outcome: "Peer-driven growth" },
+  { week: "Week 10", action: "Plan integration touchpoints", outcome: "Workflow embedding" },
   { week: "Week 11-12", action: "Formalize champion program", outcome: "Long-term structure" },
 ];
 
@@ -143,7 +149,7 @@ export const expandedSponsorActions: ExpandedTimelineAction[] = [
     id: "sponsor-week-minus-2",
     week: "Week -2",
     action: "Align coalition on rollout plan",
-    outcome: "Shared rollout plan",
+    outcome: "Rollout timeline",
     details: "Meet with your coalition (team leads, managers, product ops) and identified champions to align on the rollout approach. Define what success looks like, agree on the timeline, and ensure everyone understands their role in driving adoption.",
     tips: [
       "Agree on 2-3 measurable KPIs (e.g., % of team trying v0 by week 2, time saved on prototyping)",
@@ -177,19 +183,6 @@ export const expandedSponsorActions: ExpandedTimelineAction[] = [
     ],
   },
   {
-    id: "sponsor-week-2",
-    week: "Week 2",
-    action: "Connect blockers with champions",
-    outcome: "Peer support activated",
-    details: "People who are stuck often won't ask for help publicly. Proactively connecting them with champions removes friction and builds peer relationships.",
-    tips: [
-      "Make warm introductions via Slack or email",
-      "Frame it as 'sharing tips' not 'getting help'",
-      "Follow up to ensure the connection happened",
-    ],
-    emailTemplateId: "week2-followup",
-  },
-  {
     id: "sponsor-week-3",
     week: "Week 3",
     action: "Share first success story",
@@ -205,64 +198,63 @@ export const expandedSponsorActions: ExpandedTimelineAction[] = [
   {
     id: "sponsor-week-4",
     week: "Week 4",
-    action: "Ask \"What's blocking adoption?\"",
-    outcome: "Remove obstacles",
-    details: "By week 4, patterns emerge. Directly asking what's blocking adoption surfaces issues people might not volunteer otherwise.",
+    action: "Check in with coalition on progress",
+    outcome: "Rollout pulse check",
+    details: "A brief check-in with your coalition and champions to review early adoption signals. Surface blockers, celebrate early wins, and adjust course if needed.",
     tips: [
-      "Ask in 1:1s and team settings for different perspectives",
-      "Look for systemic issues vs. individual struggles",
-      "Commit to addressing the top 1-2 blockers",
+      "Review who's tried v0 and who hasn't—look for patterns",
+      "Ask coalition what they're hearing from the team",
+      "Identify 1-2 blockers you can help remove",
     ],
   },
   {
-    id: "sponsor-week-5-6",
-    week: "Week 5-6",
-    action: "Feature champion in team meeting",
-    outcome: "Social proof",
-    details: "Public recognition of champions does double duty: it rewards their effort and provides social proof to the broader team.",
+    id: "sponsor-week-6",
+    week: "Week 6",
+    action: "Amplify a win publicly",
+    outcome: "Sustained visibility",
+    details: "Keep momentum going by sharing a win in a visible way—team meeting, Slack, or all-hands. This shows continued exec investment and provides social proof.",
     tips: [
-      "Give the champion 5-10 minutes to share their experience",
-      "Ask them to show a real example, not just talk about it",
-      "Thank them publicly for helping the team",
+      "Feature a champion or team member's success",
+      "Keep it brief—2-3 minutes in a meeting or a quick Slack post",
+      "Invite others to share what they've built",
     ],
   },
   {
-    id: "sponsor-week-7-8",
-    week: "Week 7-8",
-    action: "Review usage data with champions",
-    outcome: "Data-informed pivot",
-    details: "Two months in, you have enough data to see patterns. Review usage together with champions to understand what's working and what needs adjustment.",
+    id: "sponsor-week-8",
+    week: "Week 8",
+    action: "Review usage with Vercel exec",
+    outcome: "External accountability",
+    details: "Meet with your Vercel exec to review adoption progress, share learnings, and get their perspective on what's working at other organizations.",
     tips: [
-      "Look at who's using v0 and who isn't—why?",
-      "Identify use cases that are working well vs. not",
-      "Adjust strategy based on what you learn",
-    ],
-    emailTemplateId: "month2-deepdive",
-  },
-  {
-    id: "sponsor-week-9-10",
-    week: "Week 9-10",
-    action: "Plan integration touchpoints",
-    outcome: "Workflow embedding",
-    details: "Moving from 'optional tool' to 'embedded in workflow' is the key to sustainable adoption. Identify where v0 naturally fits and make it the default.",
-    tips: [
-      "Update onboarding docs to include v0",
-      "Add v0 suggestions to sprint planning templates",
-      "Work with champions to identify integration points",
+      "Vercel will bring usage data",
+      "Discuss what successful rollouts look like",
+      "Surface any blockers and explore advanced use cases",
     ],
   },
   {
-    id: "sponsor-week-11-12",
-    week: "Week 11-12",
+    id: "sponsor-week-10",
+    week: "Week 10",
     action: "Recognize top contributors",
     outcome: "Reinforce behavior",
-    details: "End the 90 days by recognizing those who made adoption successful. This reinforces the behavior you want and sets up the next phase.",
+    details: "Publicly recognize those who've driven adoption—champions, early adopters, and anyone who's helped others get started.",
     tips: [
       "Call out specific contributions in team-wide communication",
       "Consider small rewards or recognition",
-      "Set expectations for continued champion engagement",
+      "Make it visible—Slack, team meeting, or all-hands",
     ],
     emailTemplateId: "month3-integration",
+  },
+  {
+    id: "sponsor-week-12",
+    week: "Week 12",
+    action: "Plan for what's next",
+    outcome: "Sustained momentum",
+    details: "By now, v0 should be a daily driver integrated into core product workflows. The 90-day sprint is ending, but adoption continues. Meet with coalition to plan expansion, deeper use cases, and how to maintain momentum.",
+    tips: [
+      "Discuss expansion to other teams or departments",
+      "Identify advanced use cases to explore",
+      "Ensure the champion program is self-sustaining",
+    ],
   },
 ];
 
@@ -270,13 +262,13 @@ export const expandedChampionActions: ExpandedTimelineAction[] = [
   {
     id: "champion-week-minus-2",
     week: "Week -2",
-    action: "Accept champion role, learn v0",
-    outcome: "Champion ready",
-    details: "Spend 30-60 minutes getting hands-on with v0 before the team launch. You don't need to be an expert—just comfortable enough to help others get started.",
+    action: "Align on rollout plan and champion role",
+    outcome: "Clear expectations",
+    details: "Join the kickoff meeting with the sponsor and coalition to align on the rollout plan. Understand what's expected of you as a champion and how you'll support the team.",
     tips: [
-      "Try generating 2-3 different types of components",
-      "Note what works well and what's tricky",
-      "Think about which team projects could benefit",
+      "Clarify your role—you're a go-to resource, not tech support",
+      "Understand the timeline and key milestones",
+      "Ask what success looks like from the sponsor's perspective",
     ],
   },
   {
@@ -330,13 +322,13 @@ export const expandedChampionActions: ExpandedTimelineAction[] = [
   {
     id: "champion-week-4",
     week: "Week 4",
-    action: "Host informal lunch-and-learn",
-    outcome: "Peer teaching",
-    details: "A casual session where people can ask questions and see examples. Keep it informal—the goal is learning, not performance.",
+    action: "Check in with sponsor on progress",
+    outcome: "Aligned on status",
+    details: "Join the sponsor check-in to share what you're seeing on the ground—what's working, what's not, and where people are getting stuck.",
     tips: [
-      "30 minutes max, keep it casual",
-      "Show real examples from your work",
-      "Leave time for questions and experimentation",
+      "Come with specific examples and anecdotes",
+      "Share both wins and blockers",
+      "Suggest adjustments based on what you're hearing",
     ],
   },
   {
@@ -391,51 +383,125 @@ export const expandedChampionActions: ExpandedTimelineAction[] = [
 
 export const expandedCoalitionActions: ExpandedTimelineAction[] = [
   {
-    id: "coalition-week-1-2",
-    week: "Week 1-2",
-    action: "2-3 champions across teams",
-    outcome: "Cross-functional reach",
-    details: "Start with champions from different functional areas to ensure the adoption effort has broad visibility and diverse perspectives.",
+    id: "coalition-week-minus-2",
+    week: "Week -2",
+    action: "Align on rollout plan and support approach",
+    outcome: "Reinforcement structure",
+    details: "Join the kickoff meeting with the sponsor and champions to align on the rollout plan. Plan how you'll reinforce adoption and workflow integration through standups, 1:1s, and team communication.",
     tips: [
-      "Include frontend, backend, and design if possible",
-      "Champions don't all need to be senior",
-      "Diversity of roles creates broader reach",
+      "Clarify how you'll reinforce v0 in your team's rhythm",
+      "Understand the timeline and when to nudge adoption",
+      "Coordinate with champions on who covers what",
     ],
   },
   {
-    id: "coalition-week-3-4",
-    week: "Week 3-4",
-    action: "Weekly champion sync (15 min)",
-    outcome: "Shared learnings",
-    details: "Brief weekly syncs help champions share what's working, troubleshoot issues together, and maintain momentum.",
+    id: "coalition-week-minus-1",
+    week: "Week -1",
+    action: "Map workflows, use cases, and setup",
+    outcome: "Integration blueprint",
+    details: "Get specific on where v0 fits into your team's workflows. Document use cases, and ensure technical setup is complete—design system integrated and GitHub connected so the team can ship production code with their actual components.",
     tips: [
-      "Keep it to 15 minutes max",
-      "Start with wins, then challenges",
-      "Rotate facilitation among champions",
+      "Identify 2-3 workflows where v0 adds immediate value",
+      "Integrate your design system so v0 outputs match your standards",
+      "Connect GitHub to enable shipping production-ready code",
     ],
   },
   {
-    id: "coalition-week-5-6",
-    week: "Week 5-6",
-    action: "Expand to 5-8 champions",
-    outcome: "Broader coverage",
-    details: "Based on initial success, recruit additional champions to increase coverage. Look for people who've become enthusiastic organic users.",
+    id: "coalition-week-0",
+    week: "Week 0",
+    action: "Roll out access to team",
+    outcome: "Access and awareness",
+    details: "Roll out v0 access to the team. Ensure everyone knows how to log in and where to go for help. Share the launch message with your direct team.",
     tips: [
-      "Ask existing champions who they'd recommend",
-      "Target teams or areas with lower adoption",
-      "Quality matters more than quantity",
+      "Send access instructions alongside the sponsor's launch email",
+      "Point people to champions for questions",
+      "Share the use cases you identified in Week -1",
+    ],
+    emailTemplateId: "coalition-launch",
+  },
+  {
+    id: "coalition-week-1",
+    week: "Week 1",
+    action: "Host v0 training or hackathon",
+    outcome: "Team can build",
+    details: "Run a v0 to hero training session to get everyone comfortable building their ideas in the tool. Can be led by your team or Vercel.",
+    tips: [
+      "Keep it hands-on—everyone should build something",
+      "Use real team use cases, not generic examples",
+      "Record it for people who can't attend live",
     ],
   },
   {
-    id: "coalition-week-7-8",
-    week: "Week 7-8",
-    action: "Champion-led problem solving",
-    outcome: "Self-sufficient group",
-    details: "The coalition should start solving adoption challenges independently, with the sponsor as an enabler rather than driver.",
+    id: "coalition-week-2",
+    week: "Week 2",
+    action: "Champion-led office hours",
+    outcome: "Questions answered",
+    details: "Hold open office hours where people can drop in with questions from the training or their first attempts. Champions lead, keeping it informal and helpful.",
     tips: [
-      "Let champions propose solutions to blockers",
-      "Sponsor removes obstacles, champions drive adoption",
-      "Celebrate champion-initiated improvements",
+      "Keep it casual—no agenda, just Q&A",
+      "Have champions share quick tips and tricks",
+      "Document common questions for future reference",
+    ],
+  },
+  {
+    id: "coalition-week-3",
+    week: "Week 3",
+    action: "Building showcase",
+    outcome: "Visible momentum",
+    details: "Have team members share what they've built with v0 so far. Celebrates early wins, inspires others, and creates social proof.",
+    tips: [
+      "Keep presentations short—5 minutes max each",
+      "Encourage all skill levels to share",
+      "Record and share in Slack for those who missed it",
+    ],
+  },
+  {
+    id: "coalition-week-4",
+    week: "Week 4",
+    action: "Check in with sponsor on progress",
+    outcome: "Aligned on status",
+    details: "Join the sponsor check-in to review adoption progress, share what's working, and surface any blockers that need exec support to resolve.",
+    tips: [
+      "Bring usage data if available",
+      "Share feedback from the team",
+      "Identify blockers that need sponsor help",
+    ],
+  },
+  {
+    id: "coalition-week-5",
+    week: "Week 5",
+    action: "Send adoption survey",
+    outcome: "Structured feedback",
+    details: "Send a short survey to gather structured feedback on adoption—what's working, what's not, and what people need. Use this data in the Week 8 Vercel exec review.",
+    tips: [
+      "Keep it short—5 questions max",
+      "Ask about blockers, not just satisfaction",
+      "Share results with the sponsor and champions",
+    ],
+    emailTemplateId: "adoption-survey",
+  },
+  {
+    id: "coalition-week-6",
+    week: "Week 6",
+    action: "Advanced use cases training",
+    outcome: "Deeper skills",
+    details: "Now that people have the basics, run a session on advanced use cases—complex workflows, integrations, and power-user techniques.",
+    tips: [
+      "Feature real examples from your team's work",
+      "Cover GitHub integration and production workflows",
+      "Record for async viewing",
+    ],
+  },
+  {
+    id: "coalition-week-7",
+    week: "Week 7",
+    action: "Prep for Vercel exec review",
+    outcome: "Ready for review",
+    details: "Compile wins, usage data, and talking points for the sponsor's Week 8 meeting with the Vercel exec.",
+    tips: [
+      "Gather survey results and key metrics",
+      "Document 3-5 concrete wins with examples",
+      "Note any blockers that need Vercel's help",
     ],
   },
   {
@@ -448,6 +514,18 @@ export const expandedCoalitionActions: ExpandedTimelineAction[] = [
       "Add v0 intro to new hire buddy program",
       "Champions handle questions from new hires",
       "Keep sponsor informed but hands-off",
+    ],
+  },
+  {
+    id: "coalition-week-10",
+    week: "Week 10",
+    action: "Plan integration touchpoints",
+    outcome: "Workflow embedding",
+    details: "Moving from 'optional tool' to 'embedded in workflow' is the key to sustainable adoption. Identify where v0 naturally fits and make it the default.",
+    tips: [
+      "Update onboarding docs to include v0",
+      "Add v0 suggestions to sprint planning templates",
+      "Work with champions to identify integration points",
     ],
   },
   {
@@ -558,6 +636,59 @@ Give it a try this week. Even 15 minutes exploring. I'll be gathering feedback o
 [Your name]
 
 P.S. [Champion name] has some great examples of v0 in action—ask them if you want to see it work.`,
+  },
+  {
+    id: "coalition-launch",
+    title: "Week 0: Coalition Team Launch Message",
+    from: "champion",
+    audience: "team",
+    subject: "v0 is live — here's how we'll use it",
+    body: `Hey team,
+
+v0 is now available for us. Here's what you need to know:
+
+**What is v0?**
+An AI coding agent that turns ideas into working apps. No technical skill required.
+
+**How we'll use it:**
+- [Use case 1 from your workflow mapping]
+- [Use case 2]
+- [Use case 3]
+
+**Getting started:**
+1. Log in at https://v0.app
+2. Try building something small
+3. Questions? Ping me or [Champion name]
+
+We'll have trainings and office hours kicking off next week. In the meantime, here are some resources from Vercel to get started:
+- [Resource link 1]
+- [Resource link 2]
+
+**This week:** Give it 15 minutes. See what it can do.
+
+[Your name]`,
+  },
+  {
+    id: "adoption-survey",
+    title: "Week 5: Adoption Survey",
+    from: "champion",
+    audience: "team",
+    subject: "Quick survey: How's v0 working for you?",
+    body: `Hey team,
+
+We're a few weeks into using v0 and want to hear how it's going. This 2-minute survey helps us understand what's working and where we can improve.
+
+**Survey link:** [Link]
+
+**What we're asking:**
+- How often are you using v0?
+- What's working well?
+- What's blocking you?
+- What would help you use it more?
+
+Your feedback directly shapes what we focus on next. Thanks for taking a few minutes.
+
+[Your name]`,
   },
   {
     id: "week2-followup",
