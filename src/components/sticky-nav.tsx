@@ -9,7 +9,7 @@ const navItems = [
   { id: "framework", title: "Framework" },
   { id: "adkar", title: "Diagnosis" },
   { id: "timeline", title: "Timeline" },
-  { id: "prelaunch", title: "Playbook" },
+  { id: "prelaunch", title: "Months" },
   { id: "scenarios", title: "Troubleshooting" },
 ];
 
