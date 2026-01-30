@@ -42,6 +42,14 @@ export const metadata: Metadata = {
     description:
       "10-20-70 Sponsor Activation Framework for Enterprise v0 Adoption",
     type: "website",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "v0 Enterprise Adoption Playbook",
+    description:
+      "10-20-70 Sponsor Activation Framework for Enterprise v0 Adoption",
+    images: ["/og-image.png"],
   },
 };
 
