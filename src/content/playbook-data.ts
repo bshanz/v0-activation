@@ -658,7 +658,7 @@ v0 is an AI coding agent that speeds up product development by turning ideas int
 3. Questions? Reach out to [Champion names] or me
 
 **What I'm asking:**
-Give it a try this week. Even 15 minutes exploring. I'll be gathering feedback on how it fits our workflow.
+Try it this week on something real. A prototype you've been putting off. A tool you wish existed. 15 minutes.
 
 [Your name]
 
@@ -852,13 +852,11 @@ Thanks for embracing new ways of working.
 export const talkingPoints: TalkingPoint[] = [
   {
     id: "kickoff",
-    title: "Kickoff Meeting Script",
+    title: "Kickoff: Three Things to Make Clear",
     points: [
-      "We're adding v0 to our toolkit. It's an AI code generation tool that helps with UI work.",
-      "This isn't mandatory—it's an option. Some tasks it'll help with, others it won't.",
-      "I'm asking everyone to try it at least once this week. Just 15 minutes exploring.",
-      "[Champion names] are available if you get stuck or want to see examples.",
-      "I'll check in next week. Tell me what works and what doesn't—that's how we'll figure out where it fits.",
+      "This is a priority, not an experiment",
+      "Try it on real work this week",
+      "[Champion] is your first stop if you get stuck",
     ],
   },
   {
@@ -872,16 +870,6 @@ export const talkingPoints: TalkingPoint[] = [
       "What would need to be true for this to be useful to you?",
     ],
   },
-  {
-    id: "resistance",
-    title: "Addressing Resistance",
-    points: [
-      "I hear you. New tools can be disruptive. Let's talk about what specifically concerns you.",
-      "You're not required to use it. But I'm curious what would make you willing to try it once.",
-      "Some of your colleagues have found it useful for [specific use case]. Want to hear about their experience?",
-      "If you try it and it doesn't work for you, that's valid feedback. I'd rather know that than assume it works for everyone.",
-    ],
-  },
 ];
 
 // Handling scenarios
@@ -889,14 +877,14 @@ export const scenarios: Scenario[] = [
   {
     id: "low-adoption",
     title: "Low Initial Adoption",
-    problem: "After two weeks, less than 30% of the team has tried v0",
-    solution: "Don't panic. Identify 2-3 individuals who are stuck and offer personal walkthroughs. Sometimes one good experience creates word-of-mouth. Ask champions to share their screen in a team meeting showing a real task. Make it concrete, not theoretical.",
+    problem: "Adoption isn't picking up as expected",
+    solution: "Interview the team on blockers. Use the ADKAR framework below to identify if it's an awareness, desire, knowledge, ability, or reinforcement issue. Once you know what's holding people back, you can target your intervention.",
   },
   {
     id: "quality-concerns",
     title: "Quality Concerns",
     problem: "Team members complain v0 output needs too much cleanup",
-    solution: "Valid feedback. Work with champions to document prompt patterns that produce better output. Share these as team standards. Position v0 as '80% solution'—it gets you most of the way, human expertise finishes it.",
+    solution: "Work with champions to document prompt patterns that produce better output. Connect v0 to your GitHub repos and design system so it generates production-ready code that matches your brand and components out of the box.",
   },
   {
     id: "champion-burnout",
@@ -927,34 +915,34 @@ export const scenarios: Scenario[] = [
 // Pushback responses
 export const pushbackItems: PushbackItem[] = [
   {
-    id: "too-busy",
+    id: "time",
     objection: "I'm too busy to learn a new tool right now.",
-    response: "I get it—everyone's stretched. What if you tried it on one small task? Just 15 minutes. If it saves you time, great. If not, you've only invested 15 minutes. [Champion] can give you a quick starter tip that takes 5 minutes to try.",
+    response: "Pick one task you're already doing this week. Try v0 on just that. 15 minutes—if it doesn't save you time, you'll know.",
   },
   {
-    id: "code-quality",
-    objection: "AI-generated code isn't as good as what I write.",
-    response: "That was true in the early days of AI, but not anymore. Leading engineers at frontier labs often don't even look at code directly—they review AI output. v0 is powered by the same models. Give it a real task and see what it produces. You might be surprised.",
+    id: "use-case",
+    objection: "I don't know what I'd use it for.",
+    response: "What are you working on this sprint? Tell me and I'll tell you if v0 would help. The best use cases aren't obvious until someone shows you.",
   },
   {
-    id: "my-job",
-    objection: "If AI can do my job, what happens to me?",
-    response: "I hear that concern. Here's how I see it: v0 handles the tedious parts, which means you get to focus on the work that actually needs human judgment—architecture decisions, user experience, solving novel problems. The users who'll thrive are the ones who can leverage these tools, not compete with them.",
+    id: "skepticism",
+    objection: "I tried it and the output wasn't usable.",
+    response: "What did you try? There's a big difference between 'make me a dashboard' and giving it context about your design system and constraints. Let me show you how I prompt it.",
   },
   {
-    id: "another-tool",
+    id: "tool-fatigue",
     objection: "We already have too many tools.",
-    response: "Fair point. I wouldn't ask if I didn't think this one was different. v0 doesn't add process—it fits into how you already work, just faster. Try it once and see if it feels like additional burden or actual help.",
+    response: "v0 isn't adding a step—it fits into what you already do. You still use Figma, your IDE, code review. It just makes the path from idea to production faster.",
   },
   {
-    id: "security",
+    id: "trust",
     objection: "I don't trust AI with our codebase.",
-    response: "Security matters. Let me share what I know about v0's data handling [share specifics]. The code it generates still goes through our normal review process—it's a starting point, not a shortcut around quality controls.",
+    response: "Reasonable concern. The code v0 generates still goes through normal review—it's a starting point, not a backdoor. Nothing ships without the same checks we always do.",
   },
   {
-    id: "not-my-style",
+    id: "identity",
     objection: "I prefer to write code myself—it's how I learn.",
-    response: "That's a legitimate approach. What if you thought of v0 as a learning tool too? Generate something, then study how it approached the problem. Some users find it shows them patterns they hadn't considered. It's another input, not a replacement for your learning.",
+    response: "What if v0 is a learning tool too? Generate something, then study how it approached the problem. It's another input for your learning, not a replacement.",
   },
 ];
 
@@ -1028,7 +1016,7 @@ export const adkarDiagnosis = {
 
 // Integration checklist for Month 3
 export const integrationChecklist = [
-  "v0 included in new developer onboarding materials",
+  "v0 included in new onboarding materials",
   "Team documentation references v0 for applicable tasks",
   "Sprint templates suggest v0 for prototyping tasks",
   "Code review guidelines address AI-generated code",
@@ -1039,7 +1027,7 @@ export const integrationChecklist = [
 // Expansion questions for Month 3
 export const expansionQuestions = [
   "Which adjacent teams could benefit from our learnings?",
-  "Are there other AI tools that complement v0?",
+  "What other tools does Vercel offer that complement v0?",
   "What processes could be updated to incorporate v0 as default option?",
   "How do we maintain momentum without your direct involvement?",
   "What would success look like in 6 months? 12 months?",

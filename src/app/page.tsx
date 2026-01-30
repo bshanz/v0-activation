@@ -8,7 +8,6 @@ import { ExpandableActionTable } from "@/components/expandable-action-table";
 import { EmailTemplateList } from "@/components/email-template";
 import { TalkingPointsList } from "@/components/talking-points";
 import { ScenarioGrid } from "@/components/scenario-card";
-import { PushbackList } from "@/components/pushback-card";
 import {
   expandedSponsorActions,
   expandedChampionActions,
@@ -17,7 +16,6 @@ import {
   emailTemplates,
   talkingPoints,
   scenarios,
-  pushbackItems,
   threeLayers,
   adoptionStallQuestions,
   adkarDiagnosis,
@@ -392,7 +390,7 @@ export default function Home() {
       {/* Handling Scenarios Section */}
       <CollapsibleSection
         id="scenarios"
-        title="Handling Common Scenarios"
+        title="Handling Challenges"
         subtitle="Solutions for typical adoption challenges"
       >
         <div className="space-y-8 pt-4">
@@ -409,17 +407,6 @@ export default function Home() {
               intervention: s.intervention,
             }))}
           />
-        </div>
-      </CollapsibleSection>
-
-      {/* Handling Pushback Section */}
-      <CollapsibleSection
-        id="pushback"
-        title="Handling Pushback"
-        subtitle="Ready responses for common objections"
-      >
-        <div className="pt-4">
-          <PushbackList items={pushbackItems} />
         </div>
       </CollapsibleSection>
 
