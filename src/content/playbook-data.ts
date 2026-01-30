@@ -166,7 +166,6 @@ export const expandedSponsorActions: ExpandedTimelineAction[] = [
     outcome: "Team awareness",
     details: "A personal email from you carries more weight than a generic announcement. Keep it short, explain the 'why', and set expectations for the first week.",
     tips: [
-      "Send from your personal email, not a distribution list",
       "Highlight 2-3 specific use cases relevant to your team",
       "Name your champions so people know who to ask",
     ],
@@ -217,7 +216,6 @@ export const expandedSponsorActions: ExpandedTimelineAction[] = [
     details: "Keep momentum going by sharing a win in a visible way—team meeting, Slack, or all-hands. This shows continued exec investment and provides social proof.",
     tips: [
       "Feature a champion or team member's success",
-      "Keep it brief—2-3 minutes in a meeting or a quick Slack post",
       "Invite others to share what they've built",
     ],
   },
@@ -455,6 +453,7 @@ export const expandedCoalitionActions: ExpandedTimelineAction[] = [
     outcome: "Team can build",
     details: "Run a v0 to hero training session to get everyone comfortable building their ideas in the tool. Can be led by your team or Vercel.",
     tips: [
+      "Work with your Vercel partner to plan and run the session",
       "Keep it hands-on—everyone should build something",
       "Use real team use cases, not generic examples",
       "Record it for people who can't attend live",
