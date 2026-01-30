@@ -10,7 +10,7 @@ const navItems = [
   { id: "adkar", title: "Diagnosis" },
   { id: "timeline", title: "Timeline" },
   { id: "prelaunch", title: "Months" },
-  { id: "scenarios", title: "Troubleshooting" },
+  { id: "scenarios", title: "Challenges" },
 ];
 
 export function StickyNav() {
