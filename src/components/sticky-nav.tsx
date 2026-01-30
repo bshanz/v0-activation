@@ -4,6 +4,15 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { sections } from "@/content/playbook-data";
 import { cn } from "@/lib/utils";
 
+// Custom nav items for simplified navigation
+const navItems = [
+  { id: "framework", title: "Framework" },
+  { id: "adkar", title: "Diagnosis" },
+  { id: "timeline", title: "Timeline" },
+  { id: "prelaunch", title: "Playbook" },
+  { id: "scenarios", title: "Troubleshooting" },
+];
+
 export function StickyNav() {
   const [activeSection, setActiveSection] = useState("hero");
   const [isVisible, setIsVisible] = useState(false);
@@ -11,9 +20,27 @@ export function StickyNav() {
   const navRef = useRef<HTMLDivElement>(null);
   const buttonRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
 
-  // Update indicator position based on active section
+  // Map active section to nav item for indicator
+  const getActiveNavItem = useCallback(() => {
+    // Framework = 10-20-70 + Success Factors
+    if (activeSection === "framework" || activeSection === "success-factors") return "framework";
+    // Diagnosis = ADKAR
+    if (activeSection === "adkar") return "adkar";
+    // Timeline = Quick Reference
+    if (activeSection === "timeline") return "timeline";
+    // Playbook = Pre-Launch + Month 1/2/3
+    if (["prelaunch", "month1", "month2", "month3"].includes(activeSection)) return "prelaunch";
+    // Troubleshooting = Scenarios + Pushback
+    if (activeSection === "scenarios" || activeSection === "pushback") return "scenarios";
+    return null;
+  }, [activeSection]);
+
+  const activeNavItem = getActiveNavItem();
+
+  // Update indicator position based on active nav item
   const updateIndicator = useCallback(() => {
-    const activeButton = buttonRefs.current.get(activeSection);
+    if (!activeNavItem) return;
+    const activeButton = buttonRefs.current.get(activeNavItem);
     const navContainer = navRef.current;
 
     if (activeButton && navContainer) {
@@ -25,7 +52,7 @@ export function StickyNav() {
         width: buttonRect.width - 24, // Subtract padding from both sides
       });
     }
-  }, [activeSection]);
+  }, [activeNavItem]);
 
   useEffect(() => {
     updateIndicator();
@@ -76,9 +103,7 @@ export function StickyNav() {
     }
   };
 
-  // Get visible sections (skip hero)
-  const visibleSections = sections.slice(1);
-  const activeIndex = visibleSections.findIndex((s) => s.id === activeSection);
+  const activeIndex = navItems.findIndex((item) => item.id === activeNavItem);
   const showIndicator = activeIndex !== -1;
 
   return (
@@ -117,29 +142,29 @@ export function StickyNav() {
                 }}
               />
 
-              {visibleSections.map((section) => (
+              {navItems.map((item) => (
                 <button
-                  key={section.id}
+                  key={item.id}
                   ref={(el) => {
-                    if (el) buttonRefs.current.set(section.id, el);
+                    if (el) buttonRefs.current.set(item.id, el);
                   }}
-                  onClick={() => scrollToSection(section.id)}
+                  onClick={() => scrollToSection(item.id)}
                   className={cn(
-                    "relative px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 touch-action-manipulation",
-                    activeSection === section.id
+                    "relative px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 touch-action-manipulation cursor-pointer",
+                    activeNavItem === item.id
                       ? "text-[#0070F3]"
                       : "text-[#666666] hover:text-black"
                   )}
                 >
-                  {section.title}
+                  {item.title}
                 </button>
               ))}
             </div>
 
             {/* Mobile menu button */}
             <MobileNav
-              sections={sections}
-              activeSection={activeSection}
+              navItems={navItems}
+              activeNavItem={activeNavItem}
               scrollToSection={scrollToSection}
             />
           </div>
@@ -150,19 +175,19 @@ export function StickyNav() {
 }
 
 interface MobileNavProps {
-  sections: typeof sections;
-  activeSection: string;
+  navItems: typeof navItems;
+  activeNavItem: string | null;
   scrollToSection: (id: string) => void;
 }
 
-function MobileNav({ sections, activeSection, scrollToSection }: MobileNavProps) {
+function MobileNav({ navItems, activeNavItem, scrollToSection }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="md:hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 text-[#666666] hover:text-black transition-colors rounded-md hover:bg-[#FAFAFA] touch-action-manipulation"
+        className="p-2 text-[#666666] hover:text-black transition-colors rounded-md hover:bg-[#FAFAFA] touch-action-manipulation cursor-pointer"
         aria-label="Toggle navigation"
         aria-expanded={isOpen}
       >
@@ -210,24 +235,24 @@ function MobileNav({ sections, activeSection, scrollToSection }: MobileNavProps)
         )}
       >
         <div className="p-4 space-y-1">
-          {sections.map((section) => (
+          {navItems.map((item) => (
             <button
-              key={section.id}
+              key={item.id}
               onClick={() => {
-                scrollToSection(section.id);
+                scrollToSection(item.id);
                 setIsOpen(false);
               }}
               className={cn(
-                "w-full px-4 py-3 text-sm text-left rounded-lg transition-colors flex items-center gap-3 touch-action-manipulation",
-                activeSection === section.id
+                "w-full px-4 py-3 text-sm text-left rounded-lg transition-colors flex items-center gap-3 touch-action-manipulation cursor-pointer",
+                activeNavItem === item.id
                   ? "text-[#0070F3] bg-[rgba(0,112,243,0.05)]"
                   : "text-[#666666] hover:text-black hover:bg-[#FAFAFA]"
               )}
             >
-              {activeSection === section.id && (
+              {activeNavItem === item.id && (
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0070F3]" aria-hidden="true" />
               )}
-              {section.title}
+              {item.title}
             </button>
           ))}
         </div>
