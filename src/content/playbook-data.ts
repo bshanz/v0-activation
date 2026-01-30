@@ -934,7 +934,7 @@ export const pushbackItems: PushbackItem[] = [
   {
     id: "code-quality",
     objection: "AI-generated code isn't as good as what I write.",
-    response: "You're probably right for complex logic. v0 isn't meant to replace your expertise—it's for accelerating the routine stuff so you have more time for the interesting problems. Think of it as a fast first draft that you refine with your knowledge.",
+    response: "That was true in the early days of AI, but not anymore. Leading engineers at frontier labs often don't even look at code directly—they review AI output. v0 is powered by the same models. Give it a real task and see what it produces. You might be surprised.",
   },
   {
     id: "my-job",

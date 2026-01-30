@@ -395,8 +395,20 @@ export default function Home() {
         title="Handling Common Scenarios"
         subtitle="Solutions for typical adoption challenges"
       >
-        <div className="pt-4">
+        <div className="space-y-8 pt-4">
           <ScenarioGrid scenarios={scenarios} />
+
+          {/* ADKAR Diagnosis */}
+          <GenericTable
+            title={adkarDiagnosis.title}
+            description={adkarDiagnosis.description}
+            columns={["Stage", "Symptom", "Intervention"]}
+            rows={adkarDiagnosis.stages.map((s) => ({
+              stage: s.stage,
+              symptom: s.symptom,
+              intervention: s.intervention,
+            }))}
+          />
         </div>
       </CollapsibleSection>
 
