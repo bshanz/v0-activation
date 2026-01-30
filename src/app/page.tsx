@@ -159,7 +159,7 @@ export default function Home() {
             storageKey="v0-playbook-sponsor-completed"
           />
           <ExpandableActionTable
-            title="Coalition Building"
+            title="Coalition Actions"
             description="Growing your support network of team leads, managers, and product ops"
             actions={expandedCoalitionActions}
             emailTemplates={emailTemplates}
