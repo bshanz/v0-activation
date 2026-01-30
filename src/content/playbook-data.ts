@@ -117,14 +117,16 @@ export const sponsorActions: TimelineAction[] = [
 export const championActions: TimelineAction[] = [
   { week: "Week -2", action: "Align on rollout plan and champion role", outcome: "Clear expectations" },
   { week: "Week -1", action: "Prepare 1-2 use case demos", outcome: "Demo content ready" },
+  { week: "Week 0", action: "Run training with Vercel counterpart", outcome: "Team sees what's possible" },
   { week: "Week 1", action: "Offer 1:1 help sessions", outcome: "Personal connection" },
   { week: "Week 2", action: "Answer questions in Slack/chat", outcome: "Reduce friction" },
   { week: "Week 3", action: "Document a workflow improvement", outcome: "Sharable asset" },
   { week: "Week 4", action: "Check in with sponsor on progress", outcome: "Aligned on status" },
   { week: "Week 5-6", action: "Pair with hesitant team member", outcome: "Overcome resistance" },
   { week: "Week 7-8", action: "Gather feedback for sponsor", outcome: "Bottom-up insights" },
-  { week: "Week 9-10", action: "Help integrate into team process", outcome: "Sustainable use" },
-  { week: "Week 11-12", action: "Mentor new champion candidates", outcome: "Scale advocacy" },
+  { week: "Week 9-10", action: "Lead 'what we've shipped' showcase", outcome: "Visible impact" },
+  { week: "Week 11", action: "Mentor new champions from usage data", outcome: "Scale advocacy" },
+  { week: "Week 12", action: "Plan for what's next", outcome: "Sustained momentum" },
 ];
 
 export const coalitionActions: TimelineAction[] = [
@@ -284,6 +286,18 @@ export const expandedChampionActions: ExpandedTimelineAction[] = [
     ],
   },
   {
+    id: "champion-week-0",
+    week: "Week 0",
+    action: "Run training with Vercel counterpart",
+    outcome: "Team sees what's possible",
+    details: "Partner with your Vercel counterpart to run the launch training. Show cool things that are possible and get the team excited about what they can build.",
+    tips: [
+      "Coordinate with Vercel on who covers what",
+      "Show your prepared demos alongside Vercel examples",
+      "Make it hands-on—have people build something live",
+    ],
+  },
+  {
     id: "champion-week-1",
     week: "Week 1",
     action: "Offer 1:1 help sessions",
@@ -294,6 +308,7 @@ export const expandedChampionActions: ExpandedTimelineAction[] = [
       "Let them pick a task they're working on",
       "Focus on getting them one small win",
     ],
+    emailTemplateId: "champion-intro",
   },
   {
     id: "champion-week-2",
@@ -358,25 +373,37 @@ export const expandedChampionActions: ExpandedTimelineAction[] = [
   {
     id: "champion-week-9-10",
     week: "Week 9-10",
-    action: "Help integrate into team process",
-    outcome: "Sustainable use",
-    details: "Work with the team to identify where v0 should become standard practice. Help update documentation and templates.",
+    action: "Lead 'what we've shipped' showcase",
+    outcome: "Visible impact",
+    details: "Host a showcase highlighting what the team has actually shipped with v0. This celebrates progress, demonstrates real impact, and inspires others to go deeper.",
     tips: [
-      "Suggest v0 for specific types of tasks",
-      "Update team wiki or documentation",
-      "Add v0 to new member onboarding",
+      "Feature a mix of big wins and small improvements",
+      "Include metrics where possible (time saved, etc.)",
+      "Invite the sponsor to recognize contributors",
     ],
   },
   {
-    id: "champion-week-11-12",
-    week: "Week 11-12",
-    action: "Mentor new champion candidates",
+    id: "champion-week-11",
+    week: "Week 11",
+    action: "Mentor new champions from usage data",
     outcome: "Scale advocacy",
-    details: "Identify 1-2 people who could become the next generation of champions and start mentoring them to ensure continuity.",
+    details: "Use usage data to identify power users who could become the next generation of champions. Start mentoring them to ensure continuity.",
     tips: [
-      "Look for people who've become enthusiastic users",
+      "Look at usage data to find consistent, enthusiastic users",
       "Share what you've learned about being a champion",
-      "Introduce them to the sponsor",
+      "Introduce them to the sponsor and coalition",
+    ],
+  },
+  {
+    id: "champion-week-12",
+    week: "Week 12",
+    action: "Plan for what's next",
+    outcome: "Sustained momentum",
+    details: "By now, v0 should be a daily driver. Join the sponsor and coalition to plan expansion, deeper use cases, and how to keep momentum going.",
+    tips: [
+      "Share your perspective on what's working and what's not",
+      "Suggest advanced use cases to explore",
+      "Help onboard the next wave of champions",
     ],
   },
 ];
@@ -687,6 +714,22 @@ We're a few weeks into using v0 and want to hear how it's going. This 2-minute s
 - What would help you use it more?
 
 Your feedback directly shapes what we focus on next. Thanks for taking a few minutes.
+
+[Your name]`,
+  },
+  {
+    id: "champion-intro",
+    title: "Week 1: Champion Intro Message",
+    from: "champion",
+    audience: "team",
+    subject: "I'm here to help with v0",
+    body: `Hey team! 👋
+
+I'm one of the v0 champions for our rollout. If you're trying v0 and have questions, get stuck, or just want someone to pair with—I'm here to help.
+
+Feel free to DM me or drop questions here. No question is too basic.
+
+Happy to do a quick 15-min walkthrough if you want to see it in action.
 
 [Your name]`,
   },
