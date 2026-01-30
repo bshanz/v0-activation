@@ -66,6 +66,16 @@ export function StickyNav() {
       const scrollThreshold = window.innerHeight * 0.6;
       setIsVisible(window.scrollY > scrollThreshold);
 
+      // Check if at bottom of page — force last section active
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const bottomBuffer = 50; // pixels from bottom to trigger
+
+      if (scrollPosition >= documentHeight - bottomBuffer) {
+        setActiveSection("pushback"); // Last section
+        return;
+      }
+
       const sectionElements = sections.map((section) => ({
         id: section.id,
         element: document.getElementById(section.id),
