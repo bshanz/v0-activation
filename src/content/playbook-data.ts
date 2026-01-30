@@ -955,7 +955,7 @@ export const threeLayers = [
     bullets: [
       "Stays visibly engaged",
       "Communicates why this matters",
-      "Asks about progress and celebrates wins",
+      "Tracks progress and celebrates wins",
     ],
   },
   {
