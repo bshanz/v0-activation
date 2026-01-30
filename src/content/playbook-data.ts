@@ -92,6 +92,7 @@ export const sections: Section[] = [
   { id: "hero", title: "Overview" },
   { id: "framework", title: "10-20-70" },
   { id: "success-factors", title: "Success Factors" },
+  { id: "adkar", title: "ADKAR" },
   { id: "timeline", title: "Quick Reference" },
   { id: "prelaunch", title: "Pre-Launch" },
   { id: "month1", title: "Month 1" },

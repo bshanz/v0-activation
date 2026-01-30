@@ -111,6 +111,38 @@ export default function Home() {
         </div>
       </CollapsibleSection>
 
+      {/* ADKAR Diagnostic Section */}
+      <CollapsibleSection
+        id="adkar"
+        title="Diagnosing Adoption Gaps"
+        subtitle="Use ADKAR to identify the real blocker—then match the right intervention"
+        defaultOpen
+      >
+        <div className="space-y-6 pt-4">
+          {/* ADKAR Explanation */}
+          <div className="border border-[var(--border)] rounded-xl p-6 bg-[var(--bg-surface)]">
+            <p className="text-[var(--text-primary)] leading-relaxed mb-4">
+              <strong>ADKAR</strong> is a change management framework developed by Prosci that breaks down individual change into five sequential stages: <strong>A</strong>wareness, <strong>D</strong>esire, <strong>K</strong>nowledge, <strong>A</strong>bility, and <strong>R</strong>einforcement.
+            </p>
+            <p className="text-[var(--text-secondary)] leading-relaxed">
+              When adoption stalls, the problem is rarely "people don't like the tool." It's that they're stuck at one of these stages. The key insight: you can't solve a Desire problem with more Training, or an Awareness problem with better Documentation. Diagnose first, then intervene.
+            </p>
+          </div>
+
+          {/* ADKAR Table */}
+          <GenericTable
+            title="ADKAR Diagnosis Guide"
+            description="Identify where people are stuck, then apply the right intervention"
+            columns={["Stage", "Symptom", "Intervention"]}
+            rows={adkarDiagnosis.stages.map((s) => ({
+              stage: s.stage,
+              symptom: s.symptom,
+              intervention: s.intervention,
+            }))}
+          />
+        </div>
+      </CollapsibleSection>
+
       {/* Quick Reference Timeline */}
       <CollapsibleSection
         id="timeline"
@@ -296,18 +328,6 @@ export default function Home() {
             />
           </div>
 
-          {/* ADKAR Diagnosis */}
-          <GenericTable
-            title={adkarDiagnosis.title}
-            description={adkarDiagnosis.description}
-            columns={["Stage", "Symptom", "Intervention"]}
-            rows={adkarDiagnosis.stages.map((s) => ({
-              stage: s.stage,
-              symptom: s.symptom,
-              intervention: s.intervention,
-            }))}
-          />
-
           {/* Email Templates */}
           <div className="pt-4">
             <h3 className="text-lg font-semibold mb-4">Email Templates</h3>
@@ -395,18 +415,6 @@ export default function Home() {
       >
         <div className="space-y-8 pt-4">
           <ScenarioGrid scenarios={scenarios} />
-
-          {/* ADKAR Diagnosis */}
-          <GenericTable
-            title={adkarDiagnosis.title}
-            description={adkarDiagnosis.description}
-            columns={["Stage", "Symptom", "Intervention"]}
-            rows={adkarDiagnosis.stages.map((s) => ({
-              stage: s.stage,
-              symptom: s.symptom,
-              intervention: s.intervention,
-            }))}
-          />
         </div>
       </CollapsibleSection>
 
