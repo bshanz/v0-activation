@@ -226,8 +226,9 @@ export const expandedSponsorActions: ExpandedTimelineAction[] = [
     week: "Week 8",
     action: "Review usage with Vercel exec",
     outcome: "External accountability",
-    details: "Meet with your Vercel exec to review adoption progress, share learnings, and get their perspective on what's working at other organizations.",
+    details: "This exec-to-exec check-in should be scheduled at kickoff (Week -2) so it's on the calendar from day one. Meet with your Vercel exec to review adoption progress, share learnings, and get their perspective on what's working at other organizations.",
     tips: [
+      "Schedule this meeting during kickoff so it's locked in",
       "Vercel will bring usage data",
       "Discuss what successful rollouts look like",
       "Surface any blockers and explore advanced use cases",
@@ -429,6 +430,7 @@ export const expandedCoalitionActions: ExpandedTimelineAction[] = [
     details: "Get specific on where v0 fits into your team's workflows. Document use cases, and ensure technical setup is complete—design system integrated and GitHub connected so the team can ship production code with their actual components.",
     tips: [
       "Identify 2-3 workflows where v0 adds immediate value",
+      "Set workflow norms like 'Every PRD ships with a prototype'",
       "Integrate your design system so v0 outputs match your standards",
       "Connect GitHub to enable shipping production-ready code",
     ],
