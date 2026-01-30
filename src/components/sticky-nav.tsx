@@ -62,7 +62,7 @@ export function StickyNav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show nav after scrolling past hero (roughly 80% of viewport)
+      // Show nav after scrolling past hero (roughly 60% of viewport)
       const scrollThreshold = window.innerHeight * 0.6;
       setIsVisible(window.scrollY > scrollThreshold);
 

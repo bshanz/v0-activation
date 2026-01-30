@@ -37,7 +37,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4 py-32 overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-16 pb-32 sm:py-32 overflow-hidden"
     >
       {/* Background gradient blobs - responsive sizes using clamp */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
