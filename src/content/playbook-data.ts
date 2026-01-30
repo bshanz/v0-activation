@@ -23,7 +23,7 @@ export interface EmailTemplate {
   id: string;
   title: string;
   from: "sponsor" | "champion";
-  audience: "sponsor" | "champion" | "team";
+  audience: "sponsor" | "champion" | "team" | "coalition";
   subject: string;
   body: string;
 }
@@ -608,7 +608,7 @@ export const emailTemplates: EmailTemplate[] = [
     id: "prelaunch-champion",
     title: "Pre-Launch: Rollout Kickoff Alignment",
     from: "sponsor",
-    audience: "champion",
+    audience: "coalition",
     subject: "v0 rollout kickoff — aligning on our plan",
     body: `Hi [Name],
 

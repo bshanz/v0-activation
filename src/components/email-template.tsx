@@ -14,6 +14,11 @@ const audienceConfig: Record<
     color: "text-[#0070F3]",
     bgColor: "bg-[rgba(0,112,243,0.05)] border-[rgba(0,112,243,0.2)]",
   },
+  coalition: {
+    label: "To: Champions & Team Leads",
+    color: "text-[#7928CA]",
+    bgColor: "bg-[rgba(121,40,202,0.05)] border-[rgba(121,40,202,0.2)]",
+  },
   team: {
     label: "To: Team",
     color: "text-black",

@@ -149,9 +149,40 @@ export default function Home() {
       <CollapsibleSection
         id="prelaunch"
         title="Pre-Launch: Building Your Foundation"
-        subtitle="Week -2 to Week 0 — Identify champions and prepare for launch"
+        subtitle="Week -2 to Week 0 — Align on rollout strategy and prepare your coalition"
       >
         <div className="space-y-8 pt-4">
+          {/* Pre-Launch Week breakdown */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <WeekCard
+              week="Week -2"
+              title="Kickoff Alignment"
+              activities={[
+                "All roles align on rollout plan together",
+                "Define success metrics and KPIs",
+                "Clarify roles: sponsor visibility, champion support, coalition reinforcement",
+              ]}
+            />
+            <WeekCard
+              week="Week -1"
+              title="Preparation"
+              activities={[
+                "Coalition maps workflows, use cases, and setup",
+                "Champions prepare 1-2 use case demos",
+                "Integrate design system and connect GitHub",
+              ]}
+            />
+            <WeekCard
+              week="Week 0"
+              title="Launch"
+              activities={[
+                "Sponsor sends personal launch email",
+                "Coalition rolls out access to team",
+                "Champions run training with Vercel",
+              ]}
+            />
+          </div>
+
           {/* Role Identification */}
           <GenericTable
             title={roleIdentification.title}
@@ -179,38 +210,38 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <WeekCard
               week="Week 1"
-              title="Launch Week"
+              title="Launch & Training"
               activities={[
-                "Send launch announcement to team",
-                "Hold 15-min intro in team meeting",
+                "Coalition hosts v0 training or hackathon",
                 "Champions offer 1:1 help sessions",
+                "Sponsor shares something they built with v0",
               ]}
             />
             <WeekCard
               week="Week 2"
-              title="Initial Support"
+              title="Office Hours & Support"
               activities={[
-                "Follow up on initial reactions",
-                "Connect blockers with champions",
-                "Share quick tips in team channel",
+                "Champion-led office hours",
+                "Answer questions in Slack/chat",
+                "Reduce friction for early adopters",
               ]}
             />
             <WeekCard
               week="Week 3"
               title="First Wins"
               activities={[
-                "Share first success story",
+                "Coalition hosts building showcase",
+                "Sponsor shares first success story",
                 "Champions document workflow improvements",
-                "Gather feedback on blockers",
               ]}
             />
             <WeekCard
               week="Week 4"
-              title="Remove Obstacles"
+              title="Alignment Check"
               activities={[
-                "Address identified blockers",
-                "Host informal lunch-and-learn",
+                "All roles check in with sponsor on progress",
                 "Review initial adoption metrics",
+                "Identify blockers to address",
               ]}
             />
           </div>
@@ -239,21 +270,30 @@ export default function Home() {
           {/* Week breakdown */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <WeekCard
-              week="Week 5-6"
-              title="Deepen Engagement"
+              week="Week 5"
+              title="Gather Feedback"
               activities={[
-                "Feature champions in team meeting",
-                "Champions pair with hesitant members",
-                "Share advanced use cases",
+                "Coalition sends adoption survey",
+                "Champions pair with hesitant team members",
+                "Gather structured feedback",
+              ]}
+            />
+            <WeekCard
+              week="Week 6"
+              title="Advanced Training"
+              activities={[
+                "Coalition runs advanced use cases training",
+                "Sponsor amplifies a win publicly",
+                "Deepen skills across team",
               ]}
             />
             <WeekCard
               week="Week 7-8"
-              title="Data-Driven Adjustment"
+              title="Prepare for Review"
               activities={[
-                "Review usage data with champions",
-                "Gather bottom-up feedback",
-                "Pivot approach based on learnings",
+                "Coalition preps for Vercel exec review",
+                "Champions gather feedback for sponsor",
+                "Sponsor reviews usage with Vercel exec (Week 8)",
               ]}
             />
           </div>
@@ -289,20 +329,20 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <WeekCard
               week="Week 9-10"
-              title="Integration"
+              title="Retro & Showcase"
               activities={[
-                "Plan workflow integration touchpoints",
-                "Coalition owns peer onboarding",
-                "Update team documentation",
+                "Coalition runs adoption retro and reviews integrations",
+                "Champions lead 'what we've shipped' showcase",
+                "Sponsor recognizes top contributors (Week 10)",
               ]}
             />
             <WeekCard
               week="Week 11-12"
-              title="Recognition & Scale"
+              title="Plan What's Next"
               activities={[
-                "Recognize top contributors",
-                "Formalize champion program",
-                "Plan expansion to other teams",
+                "Champion-led showcase and office hours (Week 11)",
+                "Mentor new champions from usage data",
+                "All roles plan for what's next (Week 12)",
               ]}
             />
           </div>
