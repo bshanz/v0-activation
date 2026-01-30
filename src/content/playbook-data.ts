@@ -1021,7 +1021,7 @@ export const integrationChecklist = [
   "v0 included in new onboarding materials",
   "Team documentation references v0 for applicable tasks",
   "Sprint templates suggest v0 for prototyping tasks",
-  "Code review guidelines address AI-generated code",
+  "Design systems and GitHub integrated with v0",
   "Champion rotation or recognition program established",
   "Quarterly check-in scheduled to assess continued value",
 ];
