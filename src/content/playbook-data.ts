@@ -56,7 +56,7 @@ export interface Section {
 // Hero section data
 export const heroData = {
   title: "v0 Enterprise Adoption Playbook",
-  subtitle: "The 10-20-70 Sponsor Activation Framework",
+  subtitle: "How the top 10% of enterprises drive successful AI deployments",
   coreInsight: "Prosci research shows projects with engaged executive sponsors are 79% likely to meet objectives versus 27% without. This playbook makes sponsor activation incredibly easy.",
   statHighlight: {
     primary: "79%",
