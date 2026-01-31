@@ -76,7 +76,7 @@ export function ABCCards() {
         >
           <span className="badge-accent mb-4 inline-block px-5 py-1.5">Framework</span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight text-black">
-            The 10-20-70 Framework
+            How the top 10% of enterprises make AI rollouts succeed
           </h2>
           <p className="text-[#666666] max-w-2xl mx-auto text-lg">
             Why most tech rollouts fail — and where this playbook focuses.
