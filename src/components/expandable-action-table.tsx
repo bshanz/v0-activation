@@ -12,6 +12,17 @@ import { useCompletedActions } from "@/hooks/useLocalStorage";
 import type { ExpandedTimelineAction, EmailTemplate } from "@/content/playbook-data";
 import { Check, Copy, CheckCircle2 } from "lucide-react";
 
+// Parse **bold** markdown syntax
+function parseMarkdownBold(text: string): React.ReactNode[] {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, index) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={index}>{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+}
+
 interface ExpandableActionTableProps {
   title: string;
   description?: string;
@@ -318,9 +329,9 @@ function ExpandedContent({
                 {emailTemplate.subject}
               </span>
             </div>
-            <pre className="text-sm text-[var(--text-secondary)] whitespace-pre-wrap font-sans leading-relaxed">
-              {emailTemplate.body}
-            </pre>
+            <div className="text-sm text-[var(--text-secondary)] whitespace-pre-wrap font-sans leading-relaxed">
+              {parseMarkdownBold(emailTemplate.body)}
+            </div>
           </div>
         </div>
       )}

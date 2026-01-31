@@ -5,6 +5,17 @@ import { cn } from "@/lib/utils";
 import type { EmailTemplate as EmailTemplateType } from "@/content/playbook-data";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
+// Parse **bold** markdown syntax
+function parseMarkdownBold(text: string): React.ReactNode[] {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, index) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={index}>{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+}
+
 const audienceConfig: Record<
   EmailTemplateType["audience"],
   { label: string; color: string; bgColor: string }
@@ -115,9 +126,9 @@ export function EmailTemplate({ template, className }: EmailTemplateProps) {
 
         {/* Body */}
         <div className="p-3 sm:p-5 relative overflow-x-auto">
-          <pre className="whitespace-pre-wrap text-xs sm:text-sm text-[var(--text-primary)] font-mono leading-relaxed break-words">
-            {template.body}
-          </pre>
+          <div className="whitespace-pre-wrap text-xs sm:text-sm text-[var(--text-primary)] font-mono leading-relaxed break-words">
+            {parseMarkdownBold(template.body)}
+          </div>
         </div>
       </div>
     </div>
