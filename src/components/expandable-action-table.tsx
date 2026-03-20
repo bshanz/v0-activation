@@ -30,6 +30,7 @@ interface ExpandableActionTableProps {
   emailTemplates?: EmailTemplate[];
   storageKey: string;
   className?: string;
+  defaultOpenFirst?: boolean;
 }
 
 export function ExpandableActionTable({
@@ -39,6 +40,7 @@ export function ExpandableActionTable({
   emailTemplates = [],
   storageKey,
   className,
+  defaultOpenFirst = false,
 }: ExpandableActionTableProps) {
   const { isCompleted, toggleCompleted } = useCompletedActions(storageKey);
 
@@ -60,7 +62,7 @@ export function ExpandableActionTable({
           <span className="font-semibold text-sm text-[var(--text-primary)]">Done</span>
         </div>
 
-        <Accordion type="multiple" className="w-full">
+        <Accordion type="multiple" className="w-full" defaultValue={defaultOpenFirst && actions.length > 0 ? [actions[0].id] : undefined}>
           {actions.map((action, index) => (
             <ExpandableActionRow
               key={action.id}

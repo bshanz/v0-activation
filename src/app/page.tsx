@@ -157,6 +157,7 @@ export default function Home() {
             actions={expandedSponsorActions}
             emailTemplates={emailTemplates}
             storageKey="v0-playbook-sponsor-completed"
+            defaultOpenFirst
           />
           <ExpandableActionTable
             title="Coalition Actions"
