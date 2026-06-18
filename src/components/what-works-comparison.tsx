@@ -43,7 +43,7 @@ export function WhatWorksComparison() {
   return (
     <div
       ref={sectionRef}
-      className="px-4 pb-16 sm:pb-24"
+      className="px-4 pt-16 sm:pt-24 pb-16 sm:pb-24"
     >
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
