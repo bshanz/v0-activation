@@ -122,7 +122,7 @@ export default function Home() {
           {/* ADKAR Explanation */}
           <div className="border border-[var(--border)] rounded-xl p-6 bg-[var(--bg-surface)]">
             <p className="text-[var(--text-primary)] leading-relaxed mb-4">
-              <strong>ADKAR</strong> is a change management framework developed by Prosci that breaks down individual change into five sequential stages: <strong>A</strong>wareness, <strong>D</strong>esire, <strong>K</strong>nowledge, <strong>A</strong>bility, and <strong>R</strong>einforcement.
+              <strong>ADKAR</strong> is a change management framework that breaks down individual change into five sequential stages: <strong>A</strong>wareness, <strong>D</strong>esire, <strong>K</strong>nowledge, <strong>A</strong>bility, and <strong>R</strong>einforcement.
             </p>
             <p className="text-[var(--text-secondary)] leading-relaxed">
               When adoption stalls, the problem is rarely "people don't like the tool." It's that they're stuck at one of these stages. The key insight: you can't solve a Desire problem with more Training, or an Awareness problem with better Documentation. Diagnose first, then intervene.
